@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universitas Teknologi Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      flex: 1;
+    }
+
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1565c0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #0d47a1;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1>Universitas Teknologi Digital</h1>
+    </header>
+
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Program Studi</a>
+      <a href="#">Berita</a>
+      <a href="#">Kontak</a>
+    </nav>
+
+    <div class="slideshow-container">
+      <div class="slide"><img src="hijau.png" alt="Slide 1"></div>
+      <div class="slide"><img src="kuning.png" alt="Slide 2"></div>
+      <div class="slide"><img src="merah.png" alt="Slide 3"></div>
+    </div>
+
+    <div class="content">
+      <h2>Selamat Datang</h2>
+      <p>Universitas Teknologi Digital adalah pilihan tepat untuk masa depan Anda.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Universitas Teknologi Digital. Hak Cipta Dilindungi.
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Ganti gambar setiap 3 detik
+    }
+  </script>
+
+</body>
+</html>
