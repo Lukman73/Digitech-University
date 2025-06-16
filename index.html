@@ -15,16 +15,12 @@
       height: 100%;
       font-family: Arial, sans-serif;
       background: #f0f0f0;
+      scroll-behavior: smooth;
     }
 
     body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .wrapper {
-      flex: 1;
     }
 
     header {
@@ -45,55 +41,45 @@
       color: white;
       padding: 14px 20px;
       text-decoration: none;
+      cursor: pointer;
     }
 
     nav a:hover {
       background: #0d47a1;
     }
 
-    .slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
-  height: 250px; /* Tetapkan tinggi tetap */
-  background: #000; /* Tambahan opsional agar tidak kelihatan putih saat loading */
-}
+    #konten-tayang {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      transition: background 0.5s ease-in-out;
+      flex-shrink: 0;
+    }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  top: 0;
-  left: 0;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Jaga agar gambar tetap memenuhi area tanpa merubah proporsi terlalu parah */
-}
-
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
 
     .slide.active {
       opacity: 1;
       z-index: 1;
     }
 
-    .content {
+    .konten-static {
       padding: 20px;
-      text-align: center;
-    }
-
-    .content h2 {
-      margin-bottom: 20px;
-    }
-
-    .content p {
-      margin-bottom: 16px;
-      line-height: 1.6;
+      max-width: 800px;
     }
 
     footer {
@@ -101,36 +87,29 @@
       color: white;
       text-align: center;
       padding: 10px;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrapper">
-    <header>
-      <h1>Universitas Teknologi Digital</h1>
-    </header>
+  <header>
+    <h1>Universitas Teknologi Digital</h1>
+  </header>
 
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#">Tentang</a>
-      <a href="#">Program Studi</a>
-      <a href="#">Berita</a>
-      <a href="#">Kontak</a>
-    </nav>
+  <nav>
+    <a data-target="beranda">Beranda</a>
+    <a data-target="tentang">Tentang</a>
+    <a data-target="program">Program Studi</a>
+    <a data-target="berita">Berita</a>
+    <a data-target="kontak">Kontak</a>
+  </nav>
 
-    <div class="slideshow-container">
-      <div class="slide active"><img src="merah.png" alt="Slide 1"></div>
-      <div class="slide"><img src="kuning.png" alt="Slide 2"></div>
-      <div class="slide"><img src="hijau.png" alt="Slide 3"></div>
-    </div>
-
-    <div class="content">
-      <h2>Selamat Datang</h2>
-      <p>Universitas Teknologi Digital adalah pilihan tepat untuk masa depan Anda.</p>
-      <p>Kami berkomitmen mencetak generasi unggul yang siap bersaing di era digital. Dengan dukungan dosen profesional, kurikulum berbasis teknologi terbaru, dan fasilitas kampus yang modern, kami hadir untuk mewujudkan impian Anda.</p>
-      <p>Bergabunglah bersama ribuan mahasiswa lainnya dalam membangun masa depan yang cerah bersama Universitas Teknologi Digital.</p>
-    </div>
+  <div id="konten-tayang">
+    <!-- Slideshow default -->
+    <img class="slide active" src="merah.png" />
+    <img class="slide" src="kuning.png" />
+    <img class="slide" src="hijau.png" />
   </div>
 
   <footer>
@@ -138,20 +117,88 @@
   </footer>
 
   <script>
+    const kontenTayang = document.getElementById("konten-tayang");
+    const slides = document.querySelectorAll(".slide");
     let slideIndex = 0;
-    const slides = document.getElementsByClassName("slide");
+    let slideInterval;
 
-    function showSlides() {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex - 1].classList.add("active");
-      setTimeout(showSlides, 4000); // Ganti gambar setiap 4 detik
+    function startSlideshow() {
+      stopSlideshow();
+      slideInterval = setInterval(() => {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add("active");
+      }, 3000);
     }
 
-    showSlides();
+    function stopSlideshow() {
+      clearInterval(slideInterval);
+    }
+
+    function tampilkanKonten(tipe) {
+      stopSlideshow();
+      kontenTayang.innerHTML = ""; // kosongkan isi
+
+      const div = document.createElement("div");
+      div.className = "konten-static";
+
+      if (tipe === "tentang") {
+        kontenTayang.style.background = "#003366";
+        div.innerHTML = `
+          <h2>Tentang Universitas Teknologi Digital</h2>
+          <p>Universitas Teknologi Digital adalah pilihan tepat untuk masa depan Anda.</p>
+          <p>Kami berkomitmen mencetak generasi unggul yang siap bersaing di era digital. Dengan dosen profesional, kurikulum modern, dan fasilitas lengkap, kami hadir untuk mewujudkan impian Anda.</p>
+        `;
+      } else if (tipe === "program") {
+        kontenTayang.style.background = "#002244";
+        div.innerHTML = `
+          <h2>Program Studi</h2>
+          <p>Kami menawarkan program unggulan seperti:</p>
+          <ul>
+            <li>Teknik Informatika</li>
+            <li>Sistem Informasi</li>
+            <li>Desain Komunikasi Visual</li>
+            <li>Bisnis Digital</li>
+          </ul>
+        `;
+      } else if (tipe === "berita") {
+        kontenTayang.style.background = "#001122";
+        div.innerHTML = `
+          <h2>Berita Terbaru</h2>
+          <p>✔ Peluncuran program Merdeka Belajar Kampus Merdeka (MBKM) resmi dimulai!</p>
+          <p>✔ Wisuda angkatan ke-5 sukses digelar secara hybrid dengan 500 lulusan.</p>
+        `;
+      } else if (tipe === "kontak") {
+        kontenTayang.style.background = "#000";
+        div.innerHTML = `
+          <h2>Kontak Kami</h2>
+          <p>Email: info@utd.ac.id</p>
+          <p>Telepon: (021) 1234-5678</p>
+          <p>Alamat: Jl. Teknologi No.1, Kota Digital, Indonesia</p>
+        `;
+      } else {
+        // Kembali ke slideshow
+        kontenTayang.innerHTML = '';
+        slides.forEach(slide => kontenTayang.appendChild(slide));
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[0].classList.add("active");
+        slideIndex = 0;
+        startSlideshow();
+        return;
+      }
+
+      kontenTayang.appendChild(div);
+    }
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        const target = link.getAttribute("data-target");
+        tampilkanKonten(target);
+      });
+    });
+
+    // Mulai slideshow saat awal
+    startSlideshow();
   </script>
 
 </body>
