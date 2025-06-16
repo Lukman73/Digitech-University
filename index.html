@@ -73,9 +73,14 @@
     }
 
     .content h2 {
-    margin-bottom: 20px; /* ini yang menambah jarak */
-  }
-    
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      margin-bottom: 10px; /* jarak antar paragraf */
+      line-height: 1.4;
+    }
+
     footer {
       background: #0d47a1;
       color: white;
@@ -100,14 +105,16 @@
     </nav>
 
     <div class="slideshow-container">
-      <div class="slide"><img src="hijau.png" alt="Slide 1"></div>
+      <div class="slide"><img src="merah.png" alt="Slide 1"></div>
       <div class="slide"><img src="kuning.png" alt="Slide 2"></div>
-      <div class="slide"><img src="merah.png" alt="Slide 3"></div>
+      <div class="slide"><img src="hijau.png" alt="Slide 3"></div>
     </div>
 
     <div class="content">
       <h2>Selamat Datang</h2>
       <p>Universitas Teknologi Digital adalah pilihan tepat untuk masa depan Anda.</p>
+      <p>Kami berkomitmen mencetak generasi unggul yang siap bersaing di era digital. Dengan dukungan dosen profesional, kurikulum berbasis teknologi terbaru, dan fasilitas kampus yang modern, kami hadir untuk mewujudkan impian Anda.</p>
+      <p>Bergabunglah bersama ribuan mahasiswa lainnya dalam membangun masa depan yang cerah bersama Universitas Teknologi Digital.</p>
     </div>
   </div>
 
@@ -127,7 +134,7 @@
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Ganti gambar setiap 3 detik
+      setTimeout(showSlides, 3000);
     }
   </script>
 
