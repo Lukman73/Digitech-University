@@ -52,26 +52,30 @@
     }
 
     .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      height: 400px;
-    }
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 400px; /* Tetapkan tinggi tetap */
+  background: #000; /* Tambahan opsional agar tidak kelihatan putih saat loading */
+}
 
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+}
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Jaga agar gambar tetap memenuhi area tanpa merubah proporsi terlalu parah */
+}
+
 
     .slide.active {
       opacity: 1;
