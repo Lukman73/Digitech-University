@@ -28,7 +28,6 @@
       width: 100%;
       overflow: hidden;
       background: #0d47a1;
-      box-sizing: border-box;
     }
 
     .isi-marquee {
@@ -37,17 +36,14 @@
       color: white;
       font-size: 4vw;
       font-weight: bold;
+      font-style: italic;
       padding: 1vw 0;
       animation: gerak-marquee 12s linear infinite;
     }
 
     @keyframes gerak-marquee {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     nav {
@@ -62,10 +58,13 @@
       padding: 14px 20px;
       text-decoration: none;
       cursor: pointer;
+      transition: background 0.3s, font-weight 0.3s;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       background: #0d47a1;
+      font-weight: bold;
     }
 
     #konten-tayang {
@@ -100,6 +99,12 @@
     .konten-static {
       padding: 20px;
       max-width: 800px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     footer {
@@ -131,12 +136,12 @@
 
   <header>
     <div class="judul-berjalan">
-      <div class="isi-marquee">Universitas Teknologi Digital - Gerbang Peradaban Digital</div>
+      <div class="isi-marquee">Universitas Teknologi Digital - <em>Gerbang Peradaban Digital</em></div>
     </div>
   </header>
 
   <nav>
-    <a data-target="beranda">Beranda</a>
+    <a data-target="beranda" class="active">Beranda</a>
     <a data-target="tentang">Tentang</a>
     <a data-target="program">Program Studi</a>
     <a data-target="berita">Berita</a>
@@ -173,6 +178,9 @@
     }
 
     function tampilkanKonten(tipe) {
+      document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
+      document.querySelector(`nav a[data-target="${tipe}"]`)?.classList.add("active");
+
       stopSlideshow();
       kontenTayang.innerHTML = ""; // kosongkan isi
 
@@ -214,13 +222,13 @@
           <p>Alamat: Jl. Teknologi No.1, Kota Digital, Indonesia</p>
         `;
       } else {
-        // Kembali ke slideshow
         kontenTayang.innerHTML = '';
         slides.forEach(slide => kontenTayang.appendChild(slide));
         slides.forEach(slide => slide.classList.remove("active"));
         slides[0].classList.add("active");
         slideIndex = 0;
         startSlideshow();
+        document.querySelector(`nav a[data-target="beranda"]`)?.classList.add("active");
         return;
       }
 
@@ -234,7 +242,6 @@
       });
     });
 
-    // Mulai slideshow saat awal
     startSlideshow();
   </script>
 
