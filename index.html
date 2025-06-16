@@ -23,11 +23,31 @@
       flex-direction: column;
     }
 
-    header {
+    /* Judul Berjalan */
+    .judul-berjalan {
+      width: 100%;
+      overflow: hidden;
       background: #0d47a1;
+      box-sizing: border-box;
+    }
+
+    .isi-marquee {
+      display: inline-block;
+      white-space: nowrap;
       color: white;
-      padding: 20px;
-      text-align: center;
+      font-size: 4vw;
+      font-weight: bold;
+      padding: 1vw 0;
+      animation: gerak-marquee 12s linear infinite;
+    }
+
+    @keyframes gerak-marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     nav {
@@ -51,7 +71,7 @@
     #konten-tayang {
       position: relative;
       width: 100%;
-      height: 500px;
+      height: 400px;
       background: black;
       overflow: hidden;
       display: flex;
@@ -89,12 +109,30 @@
       padding: 10px;
       margin-top: auto;
     }
+
+    @media (max-width: 600px) {
+      nav a {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .konten-static {
+        padding: 10px;
+        font-size: 15px;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Universitas Teknologi Digital</h1>
+    <div class="judul-berjalan">
+      <div class="isi-marquee">Universitas Teknologi Digital - Gerbang Peradaban Digital</div>
+    </div>
   </header>
 
   <nav>
@@ -106,7 +144,6 @@
   </nav>
 
   <div id="konten-tayang">
-    <!-- Slideshow default -->
     <img class="slide active" src="merah.png" />
     <img class="slide" src="kuning.png" />
     <img class="slide" src="hijau.png" />
