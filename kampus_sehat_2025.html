@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* BANNER SLIDESHOW */
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai 12 Agustus 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak!
+      </marquee>
+    </div>
+
+    <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
+    <!--
+    <div class="banner">
+      <img src="img/slide1.jpg" class="active" alt="Slide 1" />
+      <img src="img/slide2.jpg" alt="Slide 2" />
+    </div>
+    -->
+
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="photo_kampus_sehat_2025/gambar1.jpg" alt="Pemeriksaan Tekanan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar2.jpg" alt="Pemeriksaan Tekanan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar3.jpg" alt="Pemeriksaan Golongan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar4.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar5.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar6.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar7.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar8.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar9.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar10.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar11.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar12.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar13.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar14.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar15.jpg" alt="Konsultasi" />
+        </div>
+
+        <h2>Kampus Sehat 2025 - Pemeriksaan Kesehatan</h2>
+        <p>Pada hari Jumat, 13 Juni 2025, Digitech University menyelenggarakan kegiatan pemeriksaan kesehatan gratis bagi seluruh Dosen, mahasiswa dan karyawan. Kegiatan ini diprakarsai oleh Himpunan Mahasiswa Teknik Industri sebagai bentuk kepedulian terhadap kesehatan civitas akademika.</p>
+        <p>Pemeriksaan yang dilakukan meliputi pengecekan tekanan darah, kadar gula darah, gangguan mata dan konsultasi kesehatan ringan.</p>
+        <p>Acara ini disambut antusias oleh para mahasiswa yang ingin mengetahui kondisi kesehatan mereka secara dini, terlebih menjelang masa ujian akhir semester.</p>
+        <p>Melalui kegiatan ini, Digitech University ingin menanamkan pentingnya pola hidup sehat dan preventif sejak usia muda. Kampus berharap, kegiatan serupa bisa terus dilakukan secara rutin demi menciptakan lingkungan belajar yang sehat dan produktif.</p>
+        <a class="kembali" href="berita.html"> Kembali ke Berita</a>
+      </div>
+    </main>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Info Terkini Digitech</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      background-color: #002147;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .banner-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .banner-left img {
+      height: 60px;
+      margin-right: 1rem;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .banner-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner-text h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .banner-text p {
+      font-size: 1rem;
+      font-style: italic;
+      margin-top: 6px; /* Tambahan jarak antar baris */
+    }
+
+    .banner-theme {
+      font-size: 1.1rem;
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .banner-left img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      .banner-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .banner-theme {
+        align-self: center;
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .isi-berita {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="banner">
+      <div class="banner-left">
+        <img src="logo.png" alt="Logo Digitech" />
+        <div class="banner-text">
+          <h1>Digitech University</h1>
+          <p>Gerbang Peradaban Digital</p>
+        </div>
+      </div>
+      <div class="banner-theme">Info Terkini Digitech</div>
+    </div>
+
+    <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="photo_kampus_sehat_2025/gambar1.jpg" alt="Pemeriksaan Tekanan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar2.jpg" alt="Pemeriksaan Tekanan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar3.jpg" alt="Pemeriksaan Golongan Darah" />
+          <img src="photo_kampus_sehat_2025/gambar4.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar5.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar6.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar7.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar8.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar9.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar10.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar11.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar12.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar13.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar14.jpg" alt="Konsultasi" />
+          <img src="photo_kampus_sehat_2025/gambar15.jpg" alt="Konsultasi" />
+        </div>
+
+        <h2>Kampus Sehat 2025 - Pemeriksaan Kesehatan</h2>
+        <p>Pada hari Jumat, 13 Juni 2025, Digitech University menyelenggarakan kegiatan pemeriksaan kesehatan gratis bagi seluruh Dosen, mahasiswa dan karyawan. Kegiatan ini diprakarsai oleh Himpunan Mahasiswa Teknik Industri sebagai bentuk kepedulian terhadap kesehatan civitas akademika.</p>
+        <p>Pemeriksaan yang dilakukan meliputi pengecekan tekanan darah, kadar gula darah, gangguan mata dan konsultasi kesehatan ringan.</p>
+        <p>Acara ini disambut antusias oleh para mahasiswa yang ingin mengetahui kondisi kesehatan mereka secara dini, terlebih menjelang masa ujian akhir semester.</p>
+        <p>Melalui kegiatan ini, Digitech University ingin menanamkan pentingnya pola hidup sehat dan preventif sejak usia muda. Kampus berharap, kegiatan serupa bisa terus dilakukan secara rutin demi menciptakan lingkungan belajar yang sehat dan produktif.</p>
+        <a class="kembali" href="index.html">← Kembali ke Beranda</a>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 Digitech University. Hak cipta dilindungi.
+    </footer>
+  </div>
+</body>
+</html>

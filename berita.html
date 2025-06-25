@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* BANNER SLIDESHOW */
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+/* INFO TERKINI DI POJOK KANAN ATAS */
+.info-terkini {
+  margin-left: auto;
+  padding-right: 2rem; /* Memberi jarak dari sisi kanan */
+  color: yellow;
+  font-weight: bold;
+  font-size: 1rem;
+  animation: blink 1s infinite;
+}
+
+
+/* Efek berkedip */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+        <div class="info-terkini">Info Terkini Digitech</div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai 12 Agustus 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak!
+      </marquee>
+    </div>
+
+   <!-- KONTEN UTAMA -->
+    <main>
+      <div class="berita-utama">
+        <h2>MABIT ke 8 - Digitech University</h2>
+        <p>Digitech University kembali menyelenggarakan Malam Bina Iman dan Taqwa (Mabit) ke-8 pada Sabtu, 21 Juni 2025.</p>
+        <a href="mabit.html">Baca selengkapnya...</a>
+      </div>
+
+      <div class="berita-utama">
+        <h2>Kampus Sehat 2025 - Pemeriksaan Kesehatan</h2>
+        <p>Jum'at, 13 Juni 2025 Digitech University menggelar kegiatan pemeriksaan kesehatan gratis yang diselenggarakan oleh Himpunan Mahasiswa Teknik Industri.</p>
+        <a href="kampus_sehat_2025.html">Baca selengkapnya...</a>
+      </div>
+
+      <div class="berita-utama">
+        <h2>Wisuda III - Digitech University</h2>
+        <p>Sabtu, 31 Mei 2025 Digitech University menyelenggarakan Wisuda ke-III sebagai bentuk apresiasi atas pencapaian akademik para mahasiswa.</p>
+        <a href="wisuda2025.html">Baca selengkapnya...</a>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+</body>
+</html>

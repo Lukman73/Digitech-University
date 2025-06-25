@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wisuda III - Digitech University</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0e0e0; /* abu-abu lembut */
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header-text p {
+      margin: 5px 0 0 0;
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    .audio-player {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      background-color: #ffcc00;
+      padding: 8px;
+      position: relative;
+      z-index: 9;
+    }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      position: relative;
+      height: 24px;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: marquee 30s linear infinite;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: #ffcc00;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+      border: 5px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .slides {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .header-text h1 {
+        font-size: 20px;
+      }
+
+      .header-text p {
+        font-size: 14px;
+      }
+
+      .marquee-text {
+        font-size: 12px;
+      }
+
+      .audio-player {
+        top: 10px;
+        right: 10px;
+        transform: scale(0.8);
+      }
+    }
+
+    .balloon {
+      position: fixed;
+      bottom: -200px;
+      border-radius: 50%;
+      background-color: red;
+      opacity: 0.6;
+      z-index: 0;
+      animation: floatUp linear forwards;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-150vh);
+        opacity: 0;
+      }
+    }
+
+    .logo-kanan-bawah {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 200px;
+      opacity: 0.8;
+      z-index: 50;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-kanan-bawah:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logo UTD.png" alt="Logo Digitech University" class="logo" />
+    <div class="header-text">
+      <h1>Wisuda III - Digitech University</h1>
+      <p>" Melangkah Pasti, Menuju Peradaban Baru "</p>
+    </div>
+    <div class="audio-player">
+      <audio controls autoplay loop>
+        <source src="musik.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+      </audio>
+    </div>
+  </header>
+
+  <div class="menu-bar">
+    <div class="marquee-wrapper">
+      <div class="marquee-text">
+        DIGITECH UNIVERSITY - Gerbang Peradaban Digital &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Wisuda 2025 - Kebanggaan untuk Semua &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Sukses Lulusan Digitech Membangun Negeri &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Selamat & Sukses Para Wisudawan/i &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kami Bangga Padamu !
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="slideshow-container">
+      <img class="slides" src="photo_wisuda_2025/foto01.jpg" alt="Foto 1" />
+      <img class="slides" src="photo_wisuda_2025/foto02.jpg" alt="Foto 2" />
+      <img class="slides" src="photo_wisuda_2025/foto03.jpg" alt="Foto 3" />
+      <img class="slides" src="photo_wisuda_2025/foto04.jpg" alt="Foto 4" />
+      <img class="slides" src="photo_wisuda_2025/foto05.jpg" alt="Foto 5" />
+      <img class="slides" src="photo_wisuda_2025/foto06.jpg" alt="Foto 6" />
+      <img class="slides" src="photo_wisuda_2025/foto07.jpg" alt="Foto 7" />
+      <img class="slides" src="photo_wisuda_2025/foto08.jpg" alt="Foto 8" />
+      <img class="slides" src="photo_wisuda_2025/foto09.jpg" alt="Foto 9" />
+      <img class="slides" src="photo_wisuda_2025/foto010.jpg" alt="Foto 10" />
+      <img class="slides" src="photo_wisuda_2025/foto011.jpg" alt="Foto 11" />
+      <img class="slides" src="photo_wisuda_2025/foto012.jpg" alt="Foto 12" />
+      <img class="slides" src="photo_wisuda_2025/foto013.jpg" alt="Foto 13" />
+      <img class="slides" src="photo_wisuda_2025/foto014.jpg" alt="Foto 14" />
+      <img class="slides" src="photo_wisuda_2025/foto015.jpg" alt="Foto 15" />
+      <img class="slides" src="photo_wisuda_2025/foto016.jpg" alt="Foto 16" />
+      <img class="slides" src="photo_wisuda_2025/foto017.jpg" alt="Foto 17" />
+      <img class="slides" src="photo_wisuda_2025/foto018.jpg" alt="Foto 18" />
+      <img class="slides" src="photo_wisuda_2025/foto019.jpg" alt="Foto 19" />
+      <img class="slides" src="photo_wisuda_2025/foto020.jpg" alt="Foto 20" />
+      <img class="slides" src="photo_wisuda_2025/foto021.jpg" alt="Foto 21" />
+      <img class="slides" src="photo_wisuda_2025/foto022.jpg" alt="Foto 22" />
+      <img class="slides" src="photo_wisuda_2025/foto023.jpg" alt="Foto 23" />
+      <img class="slides" src="photo_wisuda_2025/foto024.jpg" alt="Foto 24" />
+      <img class="slides" src="photo_wisuda_2025/foto025.jpg" alt="Foto 25" />
+      <img class="slides" src="photo_wisuda_2025/foto026.jpg" alt="Foto 26" />
+      <img class="slides" src="photo_wisuda_2025/foto027.jpg" alt="Foto 27" />
+      <img class="slides" src="photo_wisuda_2025/foto028.jpg" alt="Foto 28" />
+      <img class="slides" src="photo_wisuda_2025/foto029.jpg" alt="Foto 29" />
+      <img class="slides" src="photo_wisuda_2025/foto030.jpg" alt="Foto 30" />
+      <img class="slides" src="photo_wisuda_2025/foto031.jpg" alt="Foto 31" />
+      <img class="slides" src="photo_wisuda_2025/foto032.jpg" alt="Foto 32" />
+      <img class="slides" src="photo_wisuda_2025/foto033.jpg" alt="Foto 33" />
+      <img class="slides" src="photo_wisuda_2025/foto034.jpg" alt="Foto 34" />
+      <img class="slides" src="photo_wisuda_2025/foto035.jpg" alt="Foto 35" />
+      <img class="slides" src="photo_wisuda_2025/foto036.jpg" alt="Foto 36" />
+      <img class="slides" src="photo_wisuda_2025/foto037.jpg" alt="Foto 37" />
+      <img class="slides" src="photo_wisuda_2025/foto038.jpg" alt="Foto 38" />
+      <img class="slides" src="photo_wisuda_2025/foto039.jpg" alt="Foto 39" />
+      <img class="slides" src="photo_wisuda_2025/foto040.jpg" alt="Foto 40" />
+      <img class="slides" src="photo_wisuda_2025/foto041.jpg" alt="Foto 41" />
+      <img class="slides" src="photo_wisuda_2025/foto042.jpg" alt="Foto 42" />
+      <img class="slides" src="photo_wisuda_2025/foto043.jpg" alt="Foto 43" />
+      <img class="slides" src="photo_wisuda_2025/foto044.jpg" alt="Foto 44" />
+      <img class="slides" src="photo_wisuda_2025/foto045.jpg" alt="Foto 45" />
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Digitech University</footer>
+
+  <!-- Logo kanan bawah -->
+  <img src="let.png" alt="Logo Tambahan" class="logo-kanan-bawah" />
+
+  <!-- Suara letusan -->
+  <audio id="popSound" src="pop.mp3" preload="auto"></audio>
+
+  <script>
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    // Balon naik
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      const size = Math.random() * 80 + 120;
+      balloon.style.width = `${size}px`;
+      balloon.style.height = `${size * 1.3}px`;
+      balloon.style.left = `${Math.random() * 100}%`;
+      balloon.style.backgroundColor = getRandomColor();
+      balloon.style.animationDuration = `${Math.random() * 6 + 8}s`;
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 15000);
+    }
+
+    function getRandomColor() {
+      const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'cyan'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    const balloonInterval = setInterval(createBalloon, 700);
+
+    // Balon meletus setelah 1 menit
+    setTimeout(() => {
+      const balloons = Array.from(document.querySelectorAll('.balloon'));
+      let index = 0;
+
+      const burstInterval = setInterval(() => {
+        if (index >= balloons.length) {
+          clearInterval(burstInterval);
+          return;
+        }
+
+        const balloon = balloons[index];
+        if (balloon) {
+          balloon.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+          balloon.style.transform = 'scale(0)';
+          balloon.style.opacity = '0';
+          setTimeout(() => {
+            if (balloon.parentNode) balloon.remove();
+          }, 300);
+
+          const pop = document.getElementById("popSound");
+          if (pop) pop.play();
+        }
+
+        index++;
+      }, 1000);
+    }, 60000);
+  </script>
+</body>
+</html>

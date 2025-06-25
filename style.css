@@ -1,0 +1,113 @@
+/* RESET & STRUKTUR DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  background: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* KONTAINER UTAMA */
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  background: #0044cc;
+  color: white;
+  padding: 20px 0;
+}
+
+/* ISI HEADER: Logo + Judul */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-left: 30px; /* beri ruang dari sisi kiri */
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* JUDUL DAN TAGLINE */
+.judul {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.judul h5 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  color: #e0e0e0;
+  font-style: italic;
+  text-align: left;
+}
+
+/* NAVIGASI */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: #003399;
+  padding: 10px;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BANNER */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TEKS BERJALAN (MARQUEE) */
+.marquee {
+  background-color: #ffff99;
+  padding: 5px;
+  font-weight: bold;
+  color: #cc0000;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* KONTEN UTAMA */
+main {
+  padding: 0;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #0044cc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
