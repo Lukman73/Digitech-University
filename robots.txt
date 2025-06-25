@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lukman73.github.io/Digitech-University/sitemap.xml
