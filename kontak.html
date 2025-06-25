@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6; /* Sesuaikan tinggi otomatis */
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9; /* Lebih tinggi di layar kecil */
+      }
+    }
+
+
+/* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1,5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+
+.telepon {
+  display: flex;
+  justify-content: center; /* center secara horizontal */
+  gap: 2rem; /* jarak antar nomor */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tel-kantor {
+  text-align: center; /* center untuk telepon kantor */
+  font-weight: bold;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+	<li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="berita.html">Berita</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai 12 Agustus 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+  </div>
+
+ <main>
+      <div class="berita-utama">
+  <h2>Alamat kampus :</h2>
+  <p>1. Jl. Cibogo Indah III, Ciwastra - Bandung.</p>
+  <p>2. Jl. Buah Batu No. 26 - Bandung.</p>
+
+  <div class="telepon">
+    <span>081-861-8611</span>
+    <span>|</span>
+    <span>081-861-8622</span>
+  </div>
+
+  <p class="tel-kantor">022 - 63161731</p>
+</div>
+
+
+</main>
+
+
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+ 
+</body>
+</html>
