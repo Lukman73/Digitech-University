@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .video-frame {
+      flex: 1 1 600px;
+      max-width: 640px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <div class="video-frame">
+      <iframe src="https://drive.google.com/file/d/1RP2shg19xud8_j4q0BuF5My68YjzU1xw/preview" allow="autoplay" allowfullscreen></iframe>
+      <p>Video 1: Building Personality</p>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://drive.google.com/file/d/1dQCTo_SR2W7fdoJhiH3dkhVael2ENpGU/preview" allow="autoplay" allowfullscreen></iframe>
+      <p>Video 2: Outbound Cikole - Lembang</p>
+    </div>
+  </div>
+
+</body>
+</html>
