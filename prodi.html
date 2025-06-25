@@ -2,7 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" 
+
+/>
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -35,6 +37,20 @@
         aspect-ratio: 16 / 9; /* Lebih tinggi di layar kecil */
       }
     }
+
+.gambar-tengah {
+  display: flex;
+  justify-content: center;  /* Horizontal */
+  align-items: center;      /* Vertikal */
+  height: 100vh;            /* Tinggi 100% layar */
+}
+
+.gambar-tengah img {
+  max-width: 100%;
+  height: auto;
+}
+
+
   </style>
 </head>
 <body>
@@ -60,10 +76,21 @@
 
     <div class="marquee">
       <marquee behavior="scroll" direction="left" scrollamount="6">
-        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai 12 Agustus 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !
+
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai 12 Agustus 
+
+2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman 
+
+Kontak !
       </marquee>
     </div>
   </div>
+
+<div class="gambar-tengah">
+  <img src="img/prodi.png" alt="Gambar Tengah" />
+</div>
+
 
   <footer>
     <p>&copy; 2025 Digitech University</p>
