@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playlist MP3 - Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4faff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: #e0e0e0;
+    }
+
+    .logo {
+      width: 80px;
+      margin-right: 20px;
+    }
+
+    .judul h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #0044cc;
+    }
+
+    .judul h5 {
+      margin: 0;
+      font-style: italic;
+      color: #666;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      background: #0044cc;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .playlist button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .playlist button:hover {
+      background-color: #0056b3;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    footer {
+      text-align: center;
+      background: #0044cc;
+      color: white;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="Logo Kampus" class="logo" />
+    <div class="judul">
+      <h1>Digitech University</h1>
+      <h5>" Gerbang Peradaban Digital "</h5>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="beranda.html">Beranda</a></li>
+      <li><a href="prodi.html">Program Studi</a></li>
+      <li><a href="berita.html">Berita</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="mp3.html">MP3</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>🎵 Playlist MP3 Kampus</h2>
+    <div class="playlist">
+      <button onclick="playAudio('audio/lagu1.mp3')">Lagu 1 - Mars Kampus</button>
+      <button onclick="playAudio('audio/lagu2.mp3')">Lagu 2 - Hymne Pendidikan</button>
+      <button onclick="playAudio('audio/lagu3.mp3')">Lagu 3 - Semangat Digital</button>
+    </div>
+    <audio id="audioPlayer" controls>
+      <source src="audio/lagu1.mp3" type="audio/mpeg">
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+
+  <script>
+    function playAudio(src) {
+      const player = document.getElementById("audioPlayer");
+      player.src = src;
+      player.play();
+    }
+  </script>
+
+</body>
+</html>
