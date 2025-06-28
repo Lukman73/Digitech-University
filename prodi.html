@@ -52,6 +52,11 @@
     animation: munculMantul 1s ease-out forwards;
   }
 
+.gambar-tengah img.klik-animasi {
+  cursor: pointer;
+}
+
+	  
   @keyframes munculMantul {
     0% {
       opacity: 0;
@@ -106,6 +111,19 @@
   <footer>
     <p>&copy; 2025 Digitech University</p>
   </footer>
- 
+
+<script>
+  const gambar = document.querySelector('.gambar-tengah img');
+  gambar.classList.add('klik-animasi');
+
+  gambar.addEventListener('click', () => {
+    gambar.style.animation = 'none'; // reset
+    gambar.offsetHeight; // force reflow
+    gambar.style.animation = 'munculMantul 1s ease-out forwards';
+  });
+</script>
+
+
+	
 </body>
 </html>
