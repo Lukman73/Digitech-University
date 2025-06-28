@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universitas Teknologi Digital - MP3</title>
+  <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .banner {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 6;
+      aspect-ratio: 16 / 6; /* Sesuaikan tinggi otomatis */
       overflow: hidden;
       margin-top: 0px;
       background: #ccc;
@@ -32,68 +32,20 @@
 
     @media (max-width: 768px) {
       .banner {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16 / 9; /* Lebih tinggi di layar kecil */
       }
     }
 
-    /* Tambahan untuk MP3 layout */
-    .audio-section {
-      padding: 40px;
-      text-align: center;
-      background-color: #e0f7fa;
-    }
-
-    .audio-section h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .playlist button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .playlist button:hover {
-      background-color: #0056b3;
-    }
-
-    audio {
-      margin-top: 20px;
-      width: 80%;
-      max-width: 400px;
-    }
-
-    nav ul {
+    .gambar-tengah {
       display: flex;
-      list-style: none;
-      justify-content: center;
-      background: #0044cc;
-      padding: 10px 0;
-      margin: 0;
+      justify-content: center;  /* Horizontal */
+      align-items: center;      /* Vertikal */
+      height: 100vh;            /* Tinggi 100% layar */
     }
 
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      background: #0044cc;
-      color: white;
-      padding: 15px 0;
-      margin-top: 30px;
+    .gambar-tengah img {
+      max-width: 75%;
+      height: auto;
     }
   </style>
 </head>
@@ -120,35 +72,17 @@
 
     <div class="marquee">
       <marquee behavior="scroll" direction="left" scrollamount="6">
-        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai 12 Agustus 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
+  </div>
 
-    <!-- Playlist Audio -->
-    <div class="audio-section">
-      <h2>Playlist Lagu Kampus</h2>
-      <div class="playlist">
-        <button onclick="playAudio('audio/mars.mp3')">Lagu 1 - Mars Kampus</button>
-        <button onclick="playAudio('audio/hymne.mp3')">Lagu 2 - Hymne Pendidikan</button>
-        <button onclick="playAudio('audio/lagu3.mp3')">Lagu 3 - Semangat Digital</button>
-      </div>
-      <audio id="audioPlayer" controls>
-        <source src="audio/mars.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung pemutar audio.
-      </audio>
-    </div>
+  <div class="gambar-tengah">
+    <img src="img/prodi.png" alt="Gambar Tengah" />
   </div>
 
   <footer>
     <p>&copy; 2025 Digitech University</p>
   </footer>
-
-  <script>
-    function playAudio(src) {
-      const player = document.getElementById("audioPlayer");
-      player.src = src;
-      player.play();
-    }
-  </script>
 </body>
 </html>
