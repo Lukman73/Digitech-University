@@ -4,151 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f4faff;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      background: #0044cc;
-      padding: 10px 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    header {
-      background-color: #e0e0e0;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      width: 80px;
-      margin-right: 20px;
-    }
-
-    .judul h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #0044cc;
-    }
-
-    .judul h5 {
-      margin: 0;
-      font-style: italic;
-      color: #666;
-    }
-
-    .marquee {
-      background: #ffeb3b;
-      color: #000;
-      padding: 10px 0;
-      font-weight: bold;
-    }
-
-    .playlist-container {
-      padding: 30px;
-      text-align: center;
-      background: #e0f7fa;
-    }
-
-    .playlist-container h2 {
-      margin-bottom: 20px;
-    }
-
-    .playlist {
-      display: inline-block;
-      text-align: left;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .playlist button {
-      display: block;
+    .banner {
+      position: relative;
       width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
     }
 
-    .playlist button:hover {
-      background: #0056b3;
-    }
-
-    audio {
-      margin-top: 20px;
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    footer {
-      text-align: center;
-      background: #0044cc;
-      color: white;
-      padding: 15px 0;
-      margin-top: 30px;
+    .banner img.active {
+      opacity: 1;
     }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+  
   </style>
 </head>
 <body>
+  <div class="wrapper">
+   <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
 
-  <header>
-    <img src="img/logo.png" alt="Logo Kampus" class="logo" />
-    <div class="judul">
-      <h1>Digitech University</h1>
-      <h5>" Gerbang Peradaban Digital "</h5>
+    <nav>
+      <ul>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner Slideshow -->
+    <div class="banner">
+      <img src="img/banner1.jpg" alt="Banner 1" class="active">
+      <img src="img/banner2.jpg" alt="Banner 2">
+      <img src="img/banner3.jpg" alt="Banner 3">
+      <img src="img/banner4.jpg" alt="Banner 4">
+      <img src="img/banner5.jpg" alt="Banner 5">
+      <img src="img/banner6.jpg" alt="Banner 6">
+      <img src="img/banner7.jpg" alt="Banner 7">
+      <img src="img/banner8.jpg" alt="Banner 8">
+      <img src="img/banner9.jpg" alt="Banner 9">
+      <img src="img/banner10.jpg" alt="Banner 10">
     </div>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Program Studi</a></li>
-      <li><a href="#">Berita</a></li>
-      <li><a href="#">Kontak</a></li>
-      <li><a href="#playlist">MP3</a></li>
-    </ul>
-  </nav>
-
-  <div class="marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-      Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
-    </marquee>
-  </div>
-
-  <!-- Playlist MP3 -->
-  <div class="playlist-container" id="playlist">
-    <h2>🎵 Playlist Lagu Kampus</h2>
-    <div class="playlist">
-      <button onclick="playAudio('audio/mars.mp3')">Lagu 1 - Mars Kampus</button>
-      <button onclick="playAudio('audio/hymne.mp3')">Lagu 2 - Hymne Pendidikan</button>
-      <button onclick="playAudio('audio/lagu3.mp3')">Lagu 3 - Semangat Digital</button>
-
-      <audio id="audioPlayer" controls>
-        <source src="audio/mars.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung pemutar audio.
-      </audio>
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
     </div>
   </div>
 
@@ -156,14 +84,22 @@
     <p>&copy; 2025 Digitech University</p>
   </footer>
 
-  <!-- Script Pemutar Audio -->
+  <!-- Script untuk slideshow -->
   <script>
-    function playAudio(src) {
-      const player = document.getElementById("audioPlayer");
-      player.src = src;
-      player.play();
-    }
-  </script>
+    const slides = document.querySelectorAll('.banner img');
+    let current = 0;
 
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 3000);
+  </script>
 </body>
 </html>
