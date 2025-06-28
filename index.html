@@ -35,12 +35,38 @@
         aspect-ratio: 16 / 9;
       }
     }
-  
+
+    /* Tambahan untuk playlist */
+    #mp3 {
+      padding: 30px;
+      text-align: center;
+      background: #e0f7fa;
+    }
+
+    .playlist button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .playlist button:hover {
+      background-color: #0056b3;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-   <header>
+    <header>
       <div class="header-content">
         <img src="img/logo.png" alt="Logo Kampus" class="logo">
         <div class="judul">
@@ -56,6 +82,7 @@
         <li><a href="prodi.html">Program Studi</a></li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="#mp3">MP3</a></li> <!-- Tambahan menu MP3 -->
       </ul>
     </nav>
 
@@ -77,6 +104,20 @@
       <marquee behavior="scroll" direction="left" scrollamount="6">
         Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
       </marquee>
+    </div>
+
+    <!-- MP3 Player Section -->
+    <div id="mp3">
+      <h2>🎵 Playlist MP3 Kampus</h2>
+      <div class="playlist">
+        <button onclick="playAudio('audio/mars.mp3')">Lagu 1 - Mars Kampus</button>
+        <button onclick="playAudio('audio/hymne.mp3')">Lagu 2 - Hymne Pendidikan</button>
+        <button onclick="playAudio('audio/lagu3.mp3')">Lagu 3 - Semangat Digital</button>
+      </div>
+      <audio id="audioPlayer" controls>
+        <source src="audio/lagu1.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
     </div>
   </div>
 
@@ -100,6 +141,15 @@
       current = (current + 1) % slides.length;
       showSlide(current);
     }, 3000);
+  </script>
+
+  <!-- Script untuk playlist -->
+  <script>
+    function playAudio(src) {
+      const player = document.getElementById("audioPlayer");
+      player.src = src;
+      player.play();
+    }
   </script>
 </body>
 </html>
