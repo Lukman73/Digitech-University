@@ -1,63 +1,94 @@
-<style>
-  .banner {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 6;
-    overflow: hidden;
-    margin-top: 0px;
-    background: #ccc;
-  }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" 
 
-  .banner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .banner img.active {
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
+/>
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
     .banner {
-      aspect-ratio: 16 / 9;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6; /* Sesuaikan tinggi otomatis */
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
     }
-  }
 
-  .gambar-tengah {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .gambar-tengah img {
-    max-width: 75%;
-    height: auto;
-    opacity: 0;
-    transform: scale(0);
-    animation: munculMantul 1s ease-out forwards;
-  }
-
-  @keyframes munculMantul {
-    0% {
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       opacity: 0;
-      transform: scale(0);
+      transition: opacity 1s ease-in-out;
     }
-    60% {
+
+    .banner img.active {
       opacity: 1;
-      transform: scale(1.2);
     }
-    80% {
-      transform: scale(0.9);
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9; /* Lebih tinggi di layar kecil */
+      }
     }
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
+
+.gambar-tengah {
+  display: flex;
+  justify-content: center;  /* Horizontal */
+  align-items: center;      /* Vertikal */
+  height: 100vh;            /* Tinggi 100% layar */
+}
+
+.gambar-tengah img {
+  max-width: 75%;
+  height: auto;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+	<li><a href="beranda.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+	<li><a href="mp3.html">MP3</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+  </div>
+
+<div class="gambar-tengah">
+  <img src="img/prodi.png" alt="Gambar Tengah" />
+</div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+ 
+</body>
+</html>
