@@ -3,102 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MP3 - Digitech University</title>
+  <title>MP3 - Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
     }
 
-    header, footer {
-      background: #004080;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    nav ul {
-      list-style: none;
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    .gambar-tengah {
       display: flex;
       justify-content: center;
-      background: #007bff;
-      padding: 0;
-      margin: 0;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px 0;
     }
 
-    nav ul li {
-      margin: 0 10px;
+    .gambar-tengah img {
+      max-width: 75%;
+      height: auto;
     }
 
-    nav ul li a {
-      display: block;
-      padding: 10px 15px;
-      color: white;
-      text-decoration: none;
-    }
-
-    nav ul li a:hover {
-      background: #0056b3;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
+    .audio-box {
+      background: #f9f9f9;
       padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .mp3-list {
-      margin-top: 20px;
-    }
-
-    .mp3-item {
-      margin-bottom: 20px;
-    }
-
-    h2 {
+      width: 75%;
       text-align: center;
-      color: #333;
+    }
+
+    .audio-box h3 {
+      margin-bottom: 15px;
+    }
+
+    audio {
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Digitech University</h1>
-    <h4>Halaman Koleksi MP3</h4>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="beranda.html">Beranda</a></li>
-      <li><a href="berita.html">Berita</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <h2>Daftar Lagu Pilihan</h2>
-    <div class="mp3-list">
-      <div class="mp3-item">
-        <p><strong>Lagu 1 - MARS</strong></p>
-        <audio controls>
-          <source src="audio/mars.mp3" type="audio/mpeg">
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
       </div>
-      <div class="mp3-item">
-        <p><strong>Lagu 2 - HYMNE</strong></p>
-        <audio controls>
-          <source src="audio/hymne.mp3" type="audio/mpeg">
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
-      </div>
-      <!-- Tambahkan lagu lainnya di sini -->
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+     </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Dengarkan Mars Kampus Digitech! &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Lagu penyemangat mahasiswa baru tersedia di sini!
+      </marquee>
+    </div>
+  </div>
+
+    <div class="audio-box">
+      <h3>Mars Digitech University</h3>
+      <audio controls>
+        <source src="audio/mars-digitech.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
+    </div>
+
+    <div class="audio-box">
+      <h3>Semangat Belajar</h3>
+      <audio controls>
+        <source src="audio/semangat.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
     </div>
   </div>
 
