@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    .wadah-narasi {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .wadah-narasi h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004c99;
+    }
+
+    .wadah-narasi p {
+      text-align: justify;
+      text-indent: 2em;
+      margin-bottom: 1em;
+    }
+
+ .btn-selanjutnya {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #004c99;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-selanjutnya:hover {
+      background-color: #003366;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+  </div>
+
+ <div class="wadah-narasi">
+    <h2>Program Studi Informatika S1</h2>
+    <p>Program Studi S1 Informatika Universitas Teknologi Digital merupakan program unggulan yang mempersiapkan generasi muda untuk menjadi ahli teknologi informasi dan pengembang solusi digital yang inovatif. Dengan kurikulum yang mengikuti perkembangan teknologi global, program ini membekali mahasiswa dengan pengetahuan teoritis dan keterampilan praktis di bidang pemrograman, pengolahan data, keamanan siber, kecerdasan buatan, dan pengembangan perangkat lunak.</p>
+    <p>Mahasiswa Informatika akan dibimbing untuk memahami algoritma dan struktur data, membangun aplikasi web dan mobile, menerapkan machine learning, serta menganalisis big data dalam konteks industri dan masyarakat digital. Pembelajaran dilakukan secara kolaboratif melalui project-based learning, studi kasus, riset, dan magang di perusahaan teknologi.</p>
+    <p>Didukung oleh dosen berpengalaman dan fasilitas modern seperti laboratorium pemrograman, jaringan komputer, dan cloud computing, mahasiswa akan terlibat langsung dalam proses inovasi digital yang relevan dengan kebutuhan industri 4.0 dan society 5.0.</p>
+
+<p style="text-indent: 0; font-weight: bold;">
+  Lulusan Program Studi Informatika S1 dapat berkarier sebagai :
+</p>
+
+<ul style="margin-left: 1em;">
+  <li style="padding-left: 8px; font-weight: bold;">Software engineer dan web developer</li>
+  <li style="padding-left: 8px; font-weight: bold;">MData scientist dan AI specialist</li>
+  <li style="padding-left: 8px; font-weight: bold;">IT consultant dan system analys</li>
+  <li style="padding-left: 8px; font-weight: bold;">Cybersecurity expert dan network engineer</li>
+  <li style="padding-left: 8px; font-weight: bold;">Startup founder atau technopreneur</li>
+</ul>
+
+<p style="margin-top: 20px;">
+  Dengan semangat inovasi dan keunggulan teknologi, Program Studi Informatika Universitas Teknologi Digital berkomitmen melahirkan lulusan yang kompeten, kreatif, dan siap bersaing di tingkat nasional maupun global dalam membentuk masa depan digital yang cerdas dan berdaya saing tinggi.
+</p>
+<a href="prodi.html" class="btn-selanjutnya">&larr; Kembali</a>
+ </div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+
+</body>
+</html>
