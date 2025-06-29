@@ -71,30 +71,54 @@
       }
     }
 
-.wadah-narasi {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.7;
-  color: #333;
-}
+    .wadah-narasi {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
 
-.wadah-narasi h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #004c99;
-}
+    .wadah-narasi h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004c99;
+    }
 
-.wadah-narasi p {
-  text-align: justify;
-  text-indent: 2em;
-  margin-bottom: 1em;
-}
- 
+    .wadah-narasi p {
+      text-align: justify;
+      text-indent: 2em;
+      margin-bottom: 1em;
+    }
+
+    .video-kampus {
+      float: left;
+      width: 300px;
+      max-width: 100%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-kampus video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .video-kampus {
+        float: none;
+        width: 100%;
+        margin: 0 auto 20px auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -130,8 +154,15 @@
     <img src="img/prodi.png" alt="Gambar Tengah" />
   </div>
 
-  <!-- Wadah Narasi -->
   <div class="wadah-narasi">
+    <!-- Video pojok kiri atas -->
+    <div class="video-kampus">
+      <video controls>
+        <source src="video/profil-kampus.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+      </video>
+    </div>
+
     <h2>Program Studi Unggulan</h2>
     <p>Universitas Teknologi Digital hadir sebagai pusat pendidikan tinggi yang adaptif terhadap perkembangan zaman dan kemajuan teknologi. Setiap program studi dirancang untuk menjawab kebutuhan industri modern, mengintegrasikan teori dan praktik secara seimbang, serta mempersiapkan mahasiswa agar mampu bersaing di era global.</p>
     <p>Melalui pendekatan pembelajaran berbasis proyek, mahasiswa tidak hanya memahami konsep, tetapi juga mampu menerapkannya dalam dunia nyata. Kami menyediakan berbagai fasilitas pendukung seperti laboratorium komputer, studio kreatif, pusat riset digital, serta ruang kolaborasi untuk mendorong inovasi dan kreativitas.</p>
