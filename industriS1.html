@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    .wadah-narasi {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .wadah-narasi h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004c99;
+    }
+
+    .wadah-narasi p {
+      text-align: justify;
+      text-indent: 2em;
+      margin-bottom: 1em;
+    }
+
+ .btn-selanjutnya {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #004c99;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-selanjutnya:hover {
+      background-color: #003366;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+  </div>
+
+ <div class="wadah-narasi">
+    <h2>Program Studi Teknik Industri S1</h2>
+    <p>Program Studi S1 Teknik Industri Universitas Teknologi Digital dirancang untuk menghasilkan lulusan yang mampu mengintegrasikan ilmu teknik, manajemen, dan teknologi informasi dalam merancang, mengelola, dan menyempurnakan sistem industri secara efisien dan berkelanjutan. Program ini menyiapkan mahasiswa menjadi tenaga profesional yang siap menghadapi tantangan dunia industri 4.0 dan era society 5.0.</p>
+    <p>Mahasiswa akan mempelajari berbagai disiplin ilmu seperti perancangan sistem kerja, ergonomi, manajemen produksi, sistem logistik, perencanaan dan pengendalian industri, sistem informasi, serta pengambilan keputusan berbasis data. Kurikulum dirancang berbasis praktik, studi kasus, dan simulasi dunia nyata untuk memperkuat keterampilan analitis, teknis, dan kepemimpinan.</p>
+    <p>Pembelajaran didukung oleh laboratorium teknik industri modern, software pemodelan dan simulasi, serta fasilitas riset yang mendorong inovasi dan produktivitas. Mahasiswa juga diberi kesempatan mengikuti magang industri, sertifikasi teknis, dan project kolaboratif dengan mitra industri nasional maupun global.</p>
+    <p>Kami percaya bahwa seorang insinyur industri tidak hanya berpikir teknis, tetapi juga strategis dan humanis, mampu merancang solusi optimal untuk meningkatkan kualitas produk, efisiensi proses, dan keberlanjutan organisasi.</p>
+
+<p style="text-indent: 0; font-weight: bold;">
+  Lulusan Program Studi Teknik Industri S1 dapat berkarier sebagai :
+</p>
+
+<ul style="margin-left: 1em;">
+  <li style="padding-left: 8px; font-weight: bold;">Industrial engineer dan process analyst</li>
+  <li style="padding-left: 8px; font-weight: bold;">Manajer produksi, operasional, dan supply chain/li>
+  <li style="padding-left: 8px; font-weight: bold;">Quality control/assurance specialist</li>
+  <li style="padding-left: 8px; font-weight: bold;">Konsultan sistem dan efisiensi kerja</li>
+  <li style="padding-left: 8px; font-weight: bold;">Wirausahawan di bidang manufaktur, logistik, dan teknologi/li>
+</ul>
+
+<p style="margin-top: 20px;">
+  Dengan semangat efisiensi, teknologi, dan inovasi, Program Studi Teknik Industri Universitas Teknologi Digital berkomitmen mencetak lulusan yang adaptif, analitis, dan berwawasan global, siap menjadi motor penggerak kemajuan industri Indonesia dan dunia.
+</p>
+<a href="prodi.html" class="btn-selanjutnya">&larr; Kembali</a>
+ </div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+
+</body>
+</html>
