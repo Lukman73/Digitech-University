@@ -6,75 +6,55 @@
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-   
-.judul-galeri {
-  text-align: center;
-  padding: 30px 0 10px;
-  background-color: #f9f9f9;
-}
+    .wadah-narasi {
+      max-width: 1000px;
+      margin: 20px auto 40px;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
 
-.judul-galeri h2 {
-  margin: 0;
-  color: #004c99;
-  font-size: 26px;
-}
+    .wadah-narasi h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #004c99;
+    }
 
-  
+    .gambar-visi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
 
-.galeri-foto {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
+    .gambar-visi img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
 
-.grid-galeri {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
+    .gambar-visi img:hover {
+      transform: scale(1.03);
+    }
 
-.grid-galeri img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.grid-galeri img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 992px) {
-  .grid-galeri {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid-galeri {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .grid-galeri {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
+    @media (max-width: 600px) {
+      .gambar-visi {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
- 
   <div class="wrapper">
-   <header>
+    <header>
       <div class="header-content">
-        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo" />
         <div class="judul">
           <h1>Digitech University</h1>
           <h5>" Gerbang Peradaban Digital "</h5>
@@ -85,11 +65,11 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="beranda.html">Beranda</a></li>
         <li><a href="prodi.html">Program Studi</a></li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
+        <li><a href="foto.html">Galeri Foto</a></li>
       </ul>
     </nav>
 
@@ -98,34 +78,28 @@
         Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
-
-<section class="judul-galeri">
-  <h2>Galeri Foto Kegiatan</h2>
-</section>
-
-<section class="galeri-foto">
-  <div class="grid-galeri">
-    <img src="photo/gambar1.jpg" alt="Kegiatan 1">
-    <img src="photo/gambar2.jpg" alt="Kegiatan 2">
-    <img src="photo/gambar3.jpg" alt="Kegiatan 3">
-    <img src="photo/gambar4.jpg" alt="Kegiatan 4">
-    <img src="photo/gambar5.jpg" alt="Kegiatan 5">
-    <img src="photo/gambar6.jpg" alt="Kegiatan 6">
-    <img src="photo/gambar7.jpg" alt="Kegiatan 7">
-    <img src="photo/gambar8.jpg" alt="Kegiatan 8">
-    <img src="photo/gambar9.jpg" alt="Kegiatan 9">
-    <img src="photo/gambar10.jpg" alt="Kegiatan 10">
-    <!-- Tambah lebih banyak jika diperlukan -->
   </div>
-</section>
 
+  <div class="wadah-narasi">
+    <h1>Galeri Foto Kegiatan</h1>
 
-
+    <div class="gambar-visi">
+      <img src="photo2/gambar1.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar2.jpg" alt="Gambar Visi Misi" /> 
+      <img src="photo2/gambar3.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar4.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar5.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar6.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar7.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar8.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar9.jpg" alt="Gambar Visi Misi" />
+      <img src="photo2/gambar10.jpg" alt="Gambar Visi Misi" />
+    </div>
+    
   </div>
 
   <footer>
     <p>&copy; 2025 Digitech University</p>
   </footer>
-
 </body>
 </html>
