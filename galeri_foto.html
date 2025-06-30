@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    .wadah-narasi {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .wadah-narasi h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004c99;
+    }
+    
+.daftar-prodi {
+  text-align: center;
+  margin-top: 20px;
+}
+    
+    .btn-selanjutnya {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #004c99;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-selanjutnya:hover {
+      background-color: #003366;
+    }
+
+    @media (max-width: 600px) {
+      .video-kampus {
+        float: none;
+        width: 100%;
+        margin: 0 auto 20px auto;
+      }
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+	<li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+  </div>
+ 
+  <div class="wadah-narasi">
+    <h2>Galeri Foto Kegiatan</h2>
+    
+<div class="daftar-prodi">
+  <a href="inovasiS2.html" class="btn-selanjutnya">Manajemen Inovasi S2 &rarr;</a>
+  <a href="akuntansiS1.html" class="btn-selanjutnya">Akuntansi S1 &rarr;</a>
+  <a href="manajemenS1.html" class="btn-selanjutnya">Manajemen S1 &rarr;</a>
+  <a href="eksyarS1.html" class="btn-selanjutnya">Ekonomi Syariah S1 &rarr;</a>
+  <a href="dkvS1.html" class="btn-selanjutnya">Desain Komunikasi Visual S1 &rarr;</a>
+  <a href="teknik-industriS1.html" class="btn-selanjutnya">Teknik Industri S1 &rarr;</a>
+  <a href="informatikaS1.html" class="btn-selanjutnya">Informatika S1 &rarr;</a>
+  <a href="hukumS1.html" class="btn-selanjutnya">Hukum S1 &rarr;</a>
+  <a href="akuntansiD3.html" class="btn-selanjutnya">Akuntansi D3 &rarr;</a>
+  <a href="manajemen-informatikaD3.html" class="btn-selanjutnya">Manajemen Informatika D3 &rarr;</a>
+  <a href="manajemen-perusahaanD3.html" class="btn-selanjutnya">Manajemen Perusahaan D3 &rarr;</a>
+</div>
+    
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+
+  <script>
+    const gambar = document.querySelector('.gambar-tengah img');
+    gambar.classList.add('klik-animasi');
+
+    gambar.addEventListener('click', () => {
+      gambar.style.animation = 'none'; // reset
+      gambar.offsetHeight; // force reflow
+      gambar.style.animation = 'munculMantul 1s ease-out forwards';
+    });
+  </script>
+</body>
+</html>
