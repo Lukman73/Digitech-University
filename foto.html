@@ -7,7 +7,66 @@
   <link rel="stylesheet" href="style.css" />
   <style>
    
+.judul-galeri {
+  text-align: center;
+  padding: 30px 0 10px;
+  background-color: #f9f9f9;
+}
+
+.judul-galeri h2 {
+  margin: 0;
+  color: #004c99;
+  font-size: 26px;
+}
+
   
+
+.galeri-foto {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.grid-galeri {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.grid-galeri img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.grid-galeri img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .grid-galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-galeri {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -39,6 +98,29 @@
         Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
+
+<section class="judul-galeri">
+  <h2>Galeri Foto Kegiatan</h2>
+</section>
+
+<section class="galeri-foto">
+  <div class="grid-galeri">
+    <img src="foto2/gambar1.jpg" alt="Kegiatan 1">
+    <img src="foto2/gambar2.jpg" alt="Kegiatan 2">
+    <img src="foto2/gambar3.jpg" alt="Kegiatan 3">
+    <img src="foto2/gambar4.jpg" alt="Kegiatan 4">
+    <img src="foto2/gambar5.jpg" alt="Kegiatan 5">
+    <img src="foto2/gambar6.jpg" alt="Kegiatan 6">
+    <img src="foto2/gambar7.jpg" alt="Kegiatan 7">
+    <img src="foto2/gambar8.jpg" alt="Kegiatan 8">
+    <img src="foto2/gambar9.jpg" alt="Kegiatan 9">
+    <img src="foto2/gambar10.jpg" alt="Kegiatan 10">
+    <!-- Tambah lebih banyak jika diperlukan -->
+  </div>
+</section>
+
+
+
   </div>
 
   <footer>
