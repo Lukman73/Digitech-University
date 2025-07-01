@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+        <li><a href="galeri_foto.html">Galeri Foto</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+
+
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="photo_seminar_2025/gambar20.jpg" alt="Gambar1" />
+          <img src="photo_seminar_2025/gambar2.jpg" alt="Gambar2" />
+          <img src="photo_seminar_2025/gambar7.jpg" alt="Gambar3" />
+        </div>
+
+        <h2>Seminar Hasil Penelitian - Digitech University 2025</h2> 
+        <p>Seminar Hasil Penelitian merupakan salah satu rangkaian penting dalam proses akademik mahasiswa tingkat akhir di Universitas Teknologi Digital. Kegiatan ini menjadi wadah bagi mahasiswa untuk mempresentasikan hasil penelitian mereka secara terbuka di hadapan dosen pembimbing, penguji, serta rekan-rekan sejawat.</p>
+        <p>Melalui seminar ini, mahasiswa tidak hanya menunjukkan kemampuan dalam menyusun dan melaksanakan penelitian ilmiah, tetapi juga melatih keterampilan komunikasi ilmiah dan mempertanggungjawabkan hasil karyanya. Topik yang diangkat dalam seminar mencerminkan beragam isu aktual dan relevan di bidang masing-masing program studi, baik dalam ranah teori maupun penerapannya di masyarakat.</p>
+        <p>Selain sebagai sarana evaluasi akhir, seminar ini juga menjadi forum pertukaran gagasan dan diskusi akademik yang konstruktif. Diharapkan, kegiatan ini mampu mendorong lahirnya pemikiran-pemikiran kritis dan inovatif yang dapat berkontribusi bagi pengembangan ilmu pengetahuan dan kemajuan bangsa.</p>
+	<p>Universitas Teknologi Digital terus berkomitmen mendukung kegiatan ilmiah seperti seminar hasil penelitian sebagai bagian dari upaya mencetak lulusan yang unggul, profesional, dan siap menghadapi tantangan global.</p>        
+<a class="kembali" href="berita.html">Kembali ke Berita</a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+</body>
+</html>
