@@ -69,39 +69,35 @@
     main {
       flex: 1;
       padding: 20px;
-      display: flex;
-      justify-content: center;
     }
 
+    /* Scroll horizontal video */
     .scroll-wrapper {
-      width: 100%;
       overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
     }
 
-    .video-gallery {
+    .video-scroll-horizontal {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      min-width: 600px; /* agar kontennya tidak terlalu rapat di layar sempit */
+      flex-direction: row;
+      gap: 15px;
     }
 
-    .video-container {
-      flex: 1 1 300px;
-      max-width: 400px;
+    .video-item {
+      width: 200px;
+      height: 112px; /* 16:9 aspect ratio */
+      flex: 0 0 auto;
       position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+      border-radius: 6px;
       overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .video-item iframe {
       width: 100%;
       height: 100%;
-      border: 0;
+      border: none;
     }
 
     footer {
@@ -144,17 +140,21 @@
 
     <main>
       <div class="scroll-wrapper">
-        <section class="video-gallery">
-          <div class="video-container">
+        <div class="video-scroll-horizontal">
+          <div class="video-item">
             <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 1" allowfullscreen></iframe>
           </div>
-          <div class="video-container">
+          <div class="video-item">
             <iframe src="https://www.youtube.com/embed/kd33UVZhnAA" title="Video 2" allowfullscreen></iframe>
           </div>
-          <div class="video-container">
+          <div class="video-item">
             <iframe src="https://www.youtube.com/embed/XZmGGAbHqa0" title="Video 3" allowfullscreen></iframe>
           </div>
-        </section>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 4" allowfullscreen></iframe>
+          </div>
+          <!-- Tambah video lainnya di sini -->
+        </div>
       </div>
     </main>
 
