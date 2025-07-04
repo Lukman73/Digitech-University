@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: flex;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+ 
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+        <li><a href="galeri_foto.html">Galeri Foto</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+
+
+    <!-- KONTEN UTAMA -->
+     <main>
+
+       <h2 style="font-size: 36px; margin-top: 2rem; margin-bottom: 2rem;">PIMPINAN UNIVERSITAS</h2>
+       <img src="photo_civitas/rektor.jpg" alt="Rektor" style="margin: 10px;" />
+       <img src="photo_civitas/wakil_rektor1.jpg" alt="Wakil Rektor 1" style="margin: 10px;" />
+       <img src="photo_civitas/wakil_rektor2.jpg" alt="Wakil Rektor 2" style="margin: 10px;" />
+
+       <h2 style="font-size: 36px; margin-top: 4rem; margin-bottom: 2rem;">KAPRODI</h2>
+       <img src="photo_civitas/prodi_akuntansi_s1.jpg" alt="Rektor" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_ti.jpg" alt="Prodi Teknik Industri S1" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_informatika.jpg" alt="Prodi Informatika" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_akuntansi_d3.jpg" alt="Rektor" style="margin: 10px;" />       
+       <img src="photo_civitas/prodi_hukum.jpg" alt="Prodi Hukum S1" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_manajemen_s1.jpg" alt="Prodi Manajemen S1" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_dkv.jpg" alt="Prodi DKV S1" style="margin: 10px;" />
+       <img src="photo_civitas/prodi_manajemen_informatika_d3.jpg" alt="Prodi Manajemen Informatika D3" style="margin: 10px;" />
+       <img src="photo_civitas/psdku.jpg" alt="Prodi Manajemen Informatika PSDKU D3" style="margin: 10px;" />
+
+   
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+</body>
+</html>
