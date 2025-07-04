@@ -69,13 +69,18 @@
     main {
       flex: 1;
       padding: 20px;
+      display: flex;
+      justify-content: center;
     }
 
-    /* Scroll horizontal video */
     .scroll-wrapper {
       overflow-x: auto;
-      white-space: nowrap;
-      padding: 10px 0;
+      width: 100%;
+    }
+
+    .video-scroll-center {
+      display: flex;
+      justify-content: center;
     }
 
     .video-scroll-horizontal {
@@ -86,7 +91,7 @@
 
     .video-item {
       width: 200px;
-      height: 112px; /* 16:9 aspect ratio */
+      height: 112px; /* rasio 16:9 */
       flex: 0 0 auto;
       position: relative;
       border-radius: 6px;
@@ -140,20 +145,22 @@
 
     <main>
       <div class="scroll-wrapper">
-        <div class="video-scroll-horizontal">
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 1" allowfullscreen></iframe>
+        <div class="video-scroll-center">
+          <div class="video-scroll-horizontal">
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 1" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/kd33UVZhnAA" title="Video 2" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/XZmGGAbHqa0" title="Video 3" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 4" allowfullscreen></iframe>
+            </div>
+            <!-- Tambahkan video lagi jika mau -->
           </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/kd33UVZhnAA" title="Video 2" allowfullscreen></iframe>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/XZmGGAbHqa0" title="Video 3" allowfullscreen></iframe>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 4" allowfullscreen></iframe>
-          </div>
-          <!-- Tambah video lainnya di sini -->
         </div>
       </div>
     </main>
