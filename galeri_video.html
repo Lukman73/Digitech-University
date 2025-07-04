@@ -6,8 +6,7 @@
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    
-   * {
+    * {
       box-sizing: border-box;
     }
 
@@ -36,6 +35,37 @@
       font-size: 28px;
     }
 
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #003b85;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #0052cc;
+    }
+
+    .marquee {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 10px;
+      font-weight: bold;
+    }
+
     main {
       flex: 1;
       padding: 20px;
@@ -44,6 +74,7 @@
     }
 
     .scroll-wrapper {
+      width: 100%;
       overflow-x: auto;
     }
 
@@ -52,13 +83,14 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      min-width: 600px; /* agar kontennya tidak terlalu rapat di layar sempit */
     }
 
     .video-container {
-      flex: 1 1 300px; /* responsive lebar minimum 300px */
+      flex: 1 1 300px;
       max-width: 400px;
       position: relative;
-      padding-bottom: 56.25%; /* Rasio 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
     }
@@ -78,7 +110,6 @@
       text-align: center;
       padding: 1rem;
     }
-
   </style>
 </head>
 <body>
@@ -111,39 +142,38 @@
       </marquee>
     </div>
 
-   
-<main>
-    <div class="scroll-wrapper">
-      <section class="video-gallery">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 1" allowfullscreen></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/kd33UVZhnAA" title="Video 2" allowfullscreen></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/XZmGGAbHqa0" title="Video 3" allowfullscreen></iframe>
-        </div>
-      </section>
-    </div>
-  </main>
+    <main>
+      <div class="scroll-wrapper">
+        <section class="video-gallery">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 1" allowfullscreen></iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/kd33UVZhnAA" title="Video 2" allowfullscreen></iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/XZmGGAbHqa0" title="Video 3" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
 
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 Digitech University</p>
-  </footer>
+    <script>
+      const gambar = document.querySelector('.gambar-tengah img');
+      if (gambar) {
+        gambar.classList.add('klik-animasi');
 
-  <script>
-    const gambar = document.querySelector('.gambar-tengah img');
-    if (gambar) {
-      gambar.classList.add('klik-animasi');
-
-      gambar.addEventListener('click', () => {
-        gambar.style.animation = 'none';
-        gambar.offsetHeight;
-        gambar.style.animation = 'munculMantul 1s ease-out forwards';
-      });
-    }
-  </script>
+        gambar.addEventListener('click', () => {
+          gambar.style.animation = 'none';
+          gambar.offsetHeight;
+          gambar.style.animation = 'munculMantul 1s ease-out forwards';
+        });
+      }
+    </script>
+  </div>
 </body>
 </html>
