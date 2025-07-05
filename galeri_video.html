@@ -11,23 +11,24 @@
       padding: 5px;
       display: flex;
       justify-content: center;
-       margin-top: 20px;
+      margin-top: 20px;
     }
 
     .scroll-wrapper {
-      overflow-x: auto;
       width: 100%;
     }
 
     .video-scroll-center {
       display: flex;
       justify-content: center;
+      width: 100%;
     }
 
     .video-scroll-horizontal {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;         /* wrap otomatis ke bawah */
       gap: 15px;
+      justify-content: center; /* agar video tetap rata tengah */
     }
 
     .video-item {
@@ -76,35 +77,33 @@
       </marquee>
     </div>
 
-    <!-- Video dimasukkan ke dalam .wrapper agar tepat di bawah marquee -->
     <main>
       <div class="scroll-wrapper">
         <div class="video-scroll-center">
           <div class="video-scroll-horizontal">
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/wTd-LbFT0Yo" title="Video 2" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/wTd-LbFT0Yo" title="Video 1" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/GzD-ap__bfI" title="Video 3" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/GzD-ap__bfI" title="Video 2" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/F6y42EWzG2Q" title="Video 4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/F6y42EWzG2Q" title="Video 3" allowfullscreen></iframe>
             </div>
-            <!-- Tambahkan video lagi jika mau -->
             <div class="video-item">
               <iframe src="https://www.youtube.com/embed/eL0LcGfjut0" title="Video 4" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/eJVXlQYNqa0" title="Video 4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/eJVXlQYNqa0" title="Video 5" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/1NjezkAOUWs" title="Video 4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/1NjezkAOUWs" title="Video 6" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/FLeWOsa9t6U" title="Video 4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/FLeWOsa9t6U" title="Video 7" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/N4OKX2hCcnM" title="Video 8" allowfullscreen></iframe>
             </div>
           </div>
         </div>
