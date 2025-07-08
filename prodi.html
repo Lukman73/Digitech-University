@@ -301,5 +301,27 @@
       gambar.style.animation = 'munculMantul 1s ease-out forwards';
     });
   </script>
+
+
+
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
+    }
+  }
+  </script>
+
+
+
+
+
+  
 </body>
 </html>
