@@ -6,7 +6,38 @@
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
 
-   <style>
+  <style>
+    /* BANNER SLIDESHOW */
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
     /* UTAMA */
     main {
       flex: 1;
@@ -36,6 +67,12 @@
       margin-top: 1rem;
       color: #002147;
       text-decoration: underline;
+    }
+
+
+main {
+      flex: 1;
+      padding: 2rem;
     }
 
     .isi-berita {
@@ -82,49 +119,62 @@
       text-decoration: underline;
     }
 
-    /* Dropdown menu jika belum ada di style.css */
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #002147;
-    }
 
-    nav ul li {
-      position: relative;
-    }
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
 
-    nav ul li a {
-      display: block;
-      padding: 1rem;
-      color: white;
-      text-decoration: none;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #ffffff;
-      min-width: 160px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-    .dropdown-content a {
-      color: #002147;
-      padding: 0.8rem 1rem;
-      display: block;
-      text-decoration: none;
-    }
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
 
-    .dropdown-content a:hover {
-      background-color: #f0f4f8;
-    }
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
+
 
   </style>
 </head>
@@ -152,15 +202,15 @@
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-
-       <li class="dropdown">
+     
+      <li class="dropdown">
         <a href="#">Galeri</a>
         <div class="dropdown-content">
           <a href="galeri_foto.html">Galeri Foto</a>
           <a href="galeri_video.html">Galeri Video</a>
         </div>
-       </li>
-                
+     </li>
+        
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
@@ -187,7 +237,6 @@
     <!-- KONTEN UTAMA -->
      <main>
       <div class="isi-berita">
-        <div class="isi-berita">
         <div class="gambar-berita">
           <img src="photo_seminar_2025/gambar20.jpg" alt="Gambar1" />
           <img src="photo_seminar_2025/gambar2.jpg" alt="Gambar2" />
