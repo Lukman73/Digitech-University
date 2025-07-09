@@ -75,6 +75,61 @@
     .btn-selanjutnya:hover {
       background-color: #003366;
     }
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
     
   </style>
 </head>
@@ -94,11 +149,36 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="beranda.html">Beranda</a></li>
+
+<li class="dropdown">
+        <a href="prodi.html">Program Studi</a>
+        <div class="dropdown-content">
+          <a href="inovasiS2.html">Manajemen Inovasi - S2</a>
+          <a href="akuntansiS1.html">Akuntansi - S1</a>
+          <a href="manajemenS1.html">Manajemen - S1</a>
+          <a href="eksyarS1.html">Ekonomi Syariah - S1</a>
+          <a href="dkvS1.html">Desain Komunikasi Visual - S1</a>
+          <a href="teknik-industriS1.html">Teknik Industri - S1</a>
+          <a href="informatikaS1.html">Informatika - S1</a>
+          <a href="hukumS1.html">Hukum - S1</a>
+          <a href="akuntansiD3.html">Akuntansi - D3</a>
+          <a href="manajemen-informatikaD3.html">Manajemen Informatika - D3</a>
+          <a href="manajemen-perusahaanD3.html">Manajemen Perusahaan - D3</a>
+        </div>
+       </li>
+        
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-        <li><a href="galeri_foto.html">Galeri Foto</a></li>
-        <li><a href="galeri_video.html">Galeri Video</a></li>
+
+ <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+     </li>
+        
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
