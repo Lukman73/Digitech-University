@@ -6,7 +6,7 @@
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
 
-  <style>
+   <style>
     /* UTAMA */
     main {
       flex: 1;
@@ -152,13 +152,15 @@
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-        <li class="dropdown">
-          <a href="#">Galeri</a>
-          <div class="dropdown-content">
-            <a href="galeri_foto.html">Galeri Foto</a>
-            <a href="galeri_video.html">Galeri Video</a>
-          </div>
-        </li>
+
+       <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+       </li>
+                
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
@@ -166,17 +168,26 @@
     <!-- MARQUEE INFORMASI -->
     <div class="marquee">
       <marquee behavior="scroll" direction="left" scrollamount="6">
-        Penerimaan Mahasiswa Baru 2025 telah dibuka !
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        Kuliah Perdana dimulai Oktober 2025
+        Kuliah Perdana dimulai Oktober 2025 
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
 
+    <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
+    <!--
+    <div class="banner">
+      <img src="img/slide1.jpg" class="active" alt="Slide 1" />
+      <img src="img/slide2.jpg" alt="Slide 2" />
+    </div>
+    -->
+
     <!-- KONTEN UTAMA -->
-    <main>
+     <main>
       <div class="isi-berita">
+        <div class="isi-berita">
         <div class="gambar-berita">
           <img src="photo_seminar_2025/gambar20.jpg" alt="Gambar1" />
           <img src="photo_seminar_2025/gambar2.jpg" alt="Gambar2" />
@@ -196,20 +207,25 @@
     <footer>
       <p>&copy; 2025 Digitech University</p>
     </footer>
+
   </div>
 
-  <!-- Proteksi: nonaktifkan klik kanan dan shortcut inspeksi -->
-  <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    document.onkeydown = function(e) {
-      if (
-        e.keyCode == 123 || // F12
-        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
-        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
-      ) {
-        return false;
-      }
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
     }
+  }
   </script>
+
+
+
+  
 </body>
 </html>
