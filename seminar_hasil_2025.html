@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    
     /* UTAMA */
     main {
       flex: 1;
@@ -37,12 +36,6 @@
       margin-top: 1rem;
       color: #002147;
       text-decoration: underline;
-    }
-
-
-main {
-      flex: 1;
-      padding: 2rem;
     }
 
     .isi-berita {
@@ -89,6 +82,49 @@ main {
       text-decoration: underline;
     }
 
+    /* Dropdown menu jika belum ada di style.css */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #002147;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #002147;
+      padding: 0.8rem 1rem;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f4f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
   </style>
 </head>
@@ -113,18 +149,16 @@ main {
         <li><a href="index.html">Home</a></li>
         <li><a href="beranda.html">Beranda</a></li>
         <li><a href="prodi.html">Program Studi</a></li>
-	<li><a href="berita.html">Berita</a></li>
+        <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-
-      <li class="dropdown">
-        <a href="#">Galeri</a>
-        <div class="dropdown-content">
-          <a href="galeri_foto.html">Galeri Foto</a>
-          <a href="galeri_video.html">Galeri Video</a>
-        </div>
-      </li>      
-	      
+        <li class="dropdown">
+          <a href="#">Galeri</a>
+          <div class="dropdown-content">
+            <a href="galeri_foto.html">Galeri Foto</a>
+            <a href="galeri_video.html">Galeri Video</a>
+          </div>
+        </li>
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
@@ -132,17 +166,16 @@ main {
     <!-- MARQUEE INFORMASI -->
     <div class="marquee">
       <marquee behavior="scroll" direction="left" scrollamount="6">
-        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        Kuliah Perdana dimulai Oktober 2025 
+        Kuliah Perdana dimulai Oktober 2025
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
 
-
     <!-- KONTEN UTAMA -->
-     <main>
+    <main>
       <div class="isi-berita">
         <div class="gambar-berita">
           <img src="photo_seminar_2025/gambar20.jpg" alt="Gambar1" />
@@ -150,12 +183,12 @@ main {
           <img src="photo_seminar_2025/gambar7.jpg" alt="Gambar3" />
         </div>
 
-        <h2>Seminar Hasil Penelitian - Digitech University 2025</h2> 
+        <h2>Seminar Hasil Penelitian - Digitech University 2025</h2>
         <p>Universitas Teknologi Digital (Digitech University) menggelar Seminar Hasil Penelitian bagi mahasiswa tingkat akhir pada bulan Juni 2025. Kegiatan ini merupakan bagian penting dari proses akademik yang wajib diikuti sebelum memasuki tahap sidang skripsi.</p>
-	<p>Dalam seminar ini, mahasiswa mempresentasikan hasil penelitian mereka di hadapan dosen pembimbing, penguji, dan peserta lainnya. Tujuannya adalah untuk mengevaluasi kualitas penelitian sekaligus melatih kemampuan komunikasi ilmiah secara terbuka dan bertanggung jawab.</p>
+        <p>Dalam seminar ini, mahasiswa mempresentasikan hasil penelitian mereka di hadapan dosen pembimbing, penguji, dan peserta lainnya. Tujuannya adalah untuk mengevaluasi kualitas penelitian sekaligus melatih kemampuan komunikasi ilmiah secara terbuka dan bertanggung jawab.</p>
         <p>Topik-topik yang dipresentasikan mencerminkan berbagai isu aktual yang relevan dengan bidang studi masing-masing, baik secara teoritis maupun aplikatif. Seminar ini juga menjadi wadah diskusi ilmiah yang mendorong lahirnya pemikiran kritis dan inovatif.</p>
-	<p>Universitas Teknologi Digital terus mendorong budaya akademik yang kuat melalui kegiatan seperti seminar hasil ini, sebagai bagian dari komitmen mencetak lulusan yang unggul, profesional, dan siap bersaing di tingkat global.</p>        
-<a class="kembali" href="berita.html">Kembali ke Berita</a>
+        <p>Universitas Teknologi Digital terus mendorong budaya akademik yang kuat melalui kegiatan seperti seminar hasil ini, sebagai bagian dari komitmen mencetak lulusan yang unggul, profesional, dan siap bersaing di tingkat global.</p>        
+        <a class="kembali" href="berita.html">Kembali ke Berita</a>
       </div>
     </main>
 
@@ -163,26 +196,20 @@ main {
     <footer>
       <p>&copy; 2025 Digitech University</p>
     </footer>
-
   </div>
 
-
-
-<script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-document.onkeydown = function(e) {
-    if (
-      e.keyCode == 123 || // F12
-      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
-      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
-    ) {
-      return false;
+  <!-- Proteksi: nonaktifkan klik kanan dan shortcut inspeksi -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+      if (
+        e.keyCode == 123 || // F12
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+      ) {
+        return false;
+      }
     }
-  }
   </script>
-
-
-
-	
 </body>
 </html>
