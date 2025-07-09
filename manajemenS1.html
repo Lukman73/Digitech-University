@@ -75,6 +75,61 @@
     .btn-selanjutnya:hover {
       background-color: #003366;
     }
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
     
   </style>
 </head>
@@ -97,8 +152,15 @@
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-        <li><a href="galeri_foto.html">Galeri Foto</a></li>
-        <li><a href="galeri_video.html">Galeri Video</a></li>
+
+ <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+     </li>
+        
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
