@@ -142,7 +142,16 @@
   }
 }
 
-    
+.blink {
+  animation: blinkText 1s infinite;
+  color: #d60000; /* Warna bisa diganti */
+  font-weight: bold;
+}
+
+@keyframes blinkText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}    
 
   </style>
 </head>
@@ -217,7 +226,7 @@
 
       
       <div class="berita-utama">
-        <h2>Selamat Datang Tim Asesor LAM Infokom !</h2>
+         <h2 class="blink">Selamat Datang Tim Asesor LAM Infokom !</h2>
         <p>Program Studi Manajemen Informatika D3 hari ini menerima kunjungan Tim Asesor dari LAM Infokom dalam rangka asesmen lapangan. Terima kasih atas kehadiran dan kesempatannya menilai mutu pendidikan di prodi kami.</p>
         <a href="asesor D3.html">Baca selengkapnya...</a>
       </div>
