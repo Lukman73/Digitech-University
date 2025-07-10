@@ -146,6 +146,25 @@
 }
 
 
+	  .blink-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.3rem;
+  margin: 30px auto;
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+.blink-link a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
 	  
   </style>
@@ -209,7 +228,13 @@
 <div class="gambar-tengah">
   <img src="img/logopmb.jpg" alt="Gambar Tengah" />
 </div>
-
+	
+<div class="blink-link">
+  <a href="https://pmb.digitechuniversity.ac.id/" target="_blank">
+    https://pmb.digitechuniversity.ac.id/
+  </a>
+</div>
+	
  <main>
       <div class="berita-utama">
   <h2>Alamat kampus :</h2>
