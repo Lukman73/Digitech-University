@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Universitas Teknologi Digital</title>
   <link rel="stylesheet" href="style.css" />
+
   <style>
+    /* BANNER SLIDESHOW */
     .banner {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 6;
       overflow: hidden;
-      margin-top: 0px;
+      margin-top: 0;
       background: #ccc;
     }
 
@@ -36,45 +38,87 @@
       }
     }
 
-    .wadah-narasi {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.7;
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
       color: #333;
+      line-height: 1.6;
     }
 
-    .wadah-narasi h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #004c99;
-    }
-
-    .wadah-narasi p {
-      text-align: justify;
-      text-indent: 2em;
-      margin-bottom: 1em;
-    }
-
- .btn-selanjutnya {
+    .berita-utama a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #004c99;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
     }
 
-    .btn-selanjutnya:hover {
-      background-color: #003366;
+
+main {
+      flex: 1;
+      padding: 2rem;
     }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
 
 /* --- Tambahan Dropdown Style --- */
 .dropdown {
@@ -131,27 +175,31 @@
   }
 }
 
-    
+
   </style>
 </head>
+
 <body>
   <div class="wrapper">
+
+    <!-- HEADER -->
     <header>
       <div class="header-content">
         <img src="img/logo.png" alt="Logo Kampus" class="logo">
         <div class="judul">
           <h1>Digitech University</h1>
-          <h5>" Gerbang Peradaban Digital "</h5>
+          <h5>"Gerbang Peradaban Digital"</h5>
         </div>
       </div>
     </header>
 
+    <!-- NAVIGASI -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="beranda.html">Beranda</a></li>
 
-<li class="dropdown">
+        <li class="dropdown">
         <a href="prodi.html">Program Studi</a>
         <div class="dropdown-content">
           <a href="inovasiS2.html">Manajemen Inovasi - S2</a>
@@ -167,13 +215,12 @@
           <a href="manajemen-perusahaanD3.html">Manajemen Perusahaan - D3</a>
         </div>
        </li>
-
         
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
-
-<li class="dropdown">
+     
+      <li class="dropdown">
         <a href="#">Galeri</a>
         <div class="dropdown-content">
           <a href="galeri_foto.html">Galeri Foto</a>
@@ -185,26 +232,49 @@
       </ul>
     </nav>
 
+    <!-- MARQUEE INFORMASI -->
     <div class="marquee">
       <marquee behavior="scroll" direction="left" scrollamount="6">
-        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
       </marquee>
     </div>
-  </div>
 
- <div class="wadah-narasi">
-    <h2>Digitech University Siap Sukseskan MUNAS ke-VII APTISI</h2>
+    <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
+    <!--
+    <div class="banner">
+      <img src="img/slide1.jpg" class="active" alt="Slide 1" />
+      <img src="img/slide2.jpg" alt="Slide 2" />
+    </div>
+    -->
+
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="munas7/gambar1.jpg" alt="Gambar1" />
+          <img src="munas7/gambar2.jpg" alt="Gambar2" />
+	  <img src="munas7/gambar3.jpg" alt="Gambar3" />
+        </div>
+
+        <h2>Digitech University Siap Sukseskan MUNAS ke-VII APTISI</h2>
     <p>Digitech University dengan bangga menyatakan dukungannya terhadap penyelenggaraan Musyawarah Nasional (MUNAS) Ke-VII Asosiasi Perguruan Tinggi Swasta Indonesia (APTISI). Kegiatan ini merupakan agenda nasional yang strategis dalam merumuskan arah kebijakan, sinergi, dan peningkatan mutu pendidikan tinggi swasta di Indonesia. MUNAS Ke-VII menjadi momentum penting untuk memperkuat posisi Perguruan Tinggi Swasta (PTS) sebagai pilar utama pembangunan sumber daya manusia unggul.</p>
     <p>Sebagai institusi pendidikan yang berkomitmen pada kemajuan teknologi dan inovasi, Digitech University memandang MUNAS ini sebagai ajang kolaboratif untuk menjawab tantangan global dalam dunia pendidikan tinggi. Perubahan lanskap industri, perkembangan teknologi digital, serta dinamika kebutuhan dunia kerja menuntut PTS untuk bertransformasi secara adaptif dan responsif. Dalam konteks ini, MUNAS APTISI menjadi forum yang tepat untuk merumuskan strategi bersama.</p>
     <p>Digitech University menaruh harapan besar bahwa MUNAS Ke-VII akan menghasilkan keputusan-keputusan yang berdampak positif, tidak hanya bagi anggota APTISI, tetapi juga bagi ekosistem pendidikan nasional secara keseluruhan. Melalui penguatan tata kelola, peningkatan daya saing, dan pengembangan jejaring antarperguruan tinggi, PTS di Indonesia diharapkan dapat semakin berkontribusi dalam mencetak generasi unggul yang siap bersaing di tingkat global.</p>
     <p>Dengan semangat kolaborasi dan inovasi, Digitech University menyatakan kesiapan untuk berpartisipasi aktif dalam mendukung kesuksesan MUNAS Ke-VII APTISI. Kami percaya bahwa sinergi antarlembaga merupakan kunci untuk menghadirkan perubahan nyata dalam sistem pendidikan tinggi nasional. Mari bersama-sama mewujudkan transformasi PTS yang berdampak menuju Indonesia Emas 2045.</p>
-  
-<a class="kembali" href="berita.html">Kembali ke Berita</a>
- </div>
+	<a class="kembali" href="berita.html">Kembali ke Berita</a>
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Digitech University</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
 
 
 <script>
@@ -219,6 +289,7 @@ document.onkeydown = function(e) {
     }
   }
   </script>
+
 
 
   
