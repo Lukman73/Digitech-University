@@ -1,188 +1,297 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" 
-    <meta http-equiv="refresh" content="0; url=https://lukman73.github.io/SEMHAS/">
-    <title>Universitas Teknologi Digital</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 30px;
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #ccc;
-        }
+  <style>
+    /* BANNER SLIDESHOW */
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0;
+      background: #ccc;
+    }
 
-        .logo-kiri,
-        .logo-kanan {
-            width: 100px;
-            height: auto;
-        }
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
 
-        .judul-header {
-            text-align: center;
-            flex-grow: 1;
-            line-height: 1.4;
-        }
+    .banner img.active {
+      opacity: 1;
+    }
 
-        .judul-header h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-        }
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
 
-        .judul-header p {
-            margin: 8px 0 0 0;
-            font-size: 16px;
-            color: #666;
-            font-style: italic;
-        }
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
 
-        main {
-            padding: 20px 30px;
-            background-color: #ffffff;
-        }
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .berita-utama {
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        }
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
 
-        .berita-utama h2 {
-            margin-top: 5;
-            color: #2c3e50;
-            font-size: 36px;
-        }
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .berita-utama p {
-            font-family: Calibri, sans-serif;
-            text-align: justify;
-            margin-bottom: 0px;
-            font-size: 25px;
-            line-height: 1.35;
-        }
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
 
 
-        .berita-utama ul {
-            padding-left: 20px;
-        }
+main {
+      flex: 1;
+      padding: 2rem;
+    }
 
-        .berita-utama li {
-            margin-bottom: 6px;
-        }
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        .berita-utama li span {
-            color: #007BFF;
-            font-weight: bold;
-            margin-right: 5px;
-        }
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
 
 
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
 
 
-        .galeri-gambar {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .galeri-gambar img {
-            width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  </style>
 </head>
 
 <body>
+  <div class="wrapper">
 
+    <!-- HEADER -->
     <header>
-        <img src="Logo UTD.png" alt="Logo Universitas Kiri" class="logo-kiri" />
-        <div class="judul-header">
-            <h1>Universitas Teknologi Digital</h1>
-            <p>" Gerbang Peradaban Digital "</p>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
         </div>
-        <!-- <img src="IFBC.png" alt="IFBC" class="logo-kanan" /> -->
+      </div>
     </header>
 
-    <main>
-        <div class="berita-utama">
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
 
-
-            <div class="galeri-gambar">
-                <img src="photo_pelatihan/02.jpg" alt="Proposal" />
-                <img src="photo_pelatihan/07.jpg" alt="Proposal" />
-                <img src="photo_pelatihan/08.jpg" alt="Proposal" />
-               
-            </div>
-
-
-            <br>
-            <br>
-
-            <h2 style="text-align: center; margin-bottom: 30px;">
-                " KLINIK PROPOSAL HIBAH PENGABDIAN KEPADA MASYARAKAT DRTPM DIKTISAINTEK "
-            </h2>
-            <p>Bandung, 23 Juli 2025 — Dalam upaya meningkatkan kapasitas dosen dalam menyusun proposal hibah pengabdian kepada masyarakat, telah diselenggarakan kegiatan Klinik Proposal Hibah Pengabdian kepada Masyarakat DRTPM Diktisaintek di Bandung. Kegiatan ini difokuskan pada peningkatan kualitas dan kuantitas proposal hibah yang diajukan ke Direktorat Riset, Teknologi, dan Pengabdian kepada Masyarakat (DRTPM).</p>
-            <br>
-            <p>Klinik proposal ini diikuti oleh dosen dan peneliti dari berbagai perguruan tinggi, khususnya dari rumpun ilmu sains dan teknologi (Saintek). Para peserta mendapatkan bimbingan langsung dari narasumber berpengalaman yang merupakan reviewer nasional hibah pengabdian. Materi yang disampaikan mencakup strategi penyusunan proposal yang efektif, kesesuaian dengan panduan DRTPM, hingga tips memperkuat relevansi dan kebermanfaatan program bagi masyarakat.</p>
-            <br>
-            <p>Kegiatan ini juga menjadi ruang diskusi aktif yang mendorong pertukaran ide dan pengalaman antar peserta. Dengan pendekatan interaktif, peserta dapat melakukan evaluasi langsung terhadap draft proposal masing-masing dan menerima masukan konstruktif dari para pendamping.</p>
-            <br>
-            <p>Melalui kegiatan ini, diharapkan jumlah proposal hibah pengabdian yang lolos seleksi dapat meningkat secara signifikan. Lebih jauh, kegiatan ini turut memperkuat implementasi Tri Dharma Perguruan Tinggi, khususnya dalam menjawab tantangan dan kebutuhan riil di tengah masyarakat.</p>
-            <br>
-                
+        <li class="dropdown">
+        <a href="prodi.html">Program Studi</a>
+        <div class="dropdown-content">
+          <a href="inovasiS2.html">Manajemen Inovasi - S2</a>
+          <a href="akuntansiS1.html">Akuntansi - S1</a>
+          <a href="manajemenS1.html">Manajemen - S1</a>
+          <a href="eksyarS1.html">Ekonomi Syariah - S1</a>
+          <a href="dkvS1.html">Desain Komunikasi Visual - S1</a>
+          <a href="teknik-industriS1.html">Teknik Industri - S1</a>
+          <a href="informatikaS1.html">Informatika - S1</a>
+          <a href="hukumS1.html">Hukum - S1</a>
+          <a href="akuntansiD3.html">Akuntansi - D3</a>
+          <a href="manajemen-informatikaD3.html">Manajemen Informatika - D3</a>
+          <a href="manajemen-perusahaanD3.html">Manajemen Perusahaan - D3</a>
         </div>
+       </li>
+        
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+     
+      <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+     </li>
+        
+        <li><a href="civitas.html">Civitas Akademika</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+
+    <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
+    <!--
+    <div class="banner">
+      <img src="img/slide1.jpg" class="active" alt="Slide 1" />
+      <img src="img/slide2.jpg" alt="Slide 2" />
+    </div>
+    -->
+
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="photo_pelatihan/02.jpg" alt="Gambar1" />
+          <img src="photo_pelatihan/07.jpg" alt="Gambar2" />
+	  <img src="photo_pelatihan/08.jpg" alt="Gambar3" />
+        </div>
+
+        <h2>KLINIK PROPOSAL HIBAH PENGABDIAN KEPADA MASYARAKAT DRTPM DIKTISAINTEK</h2> 
+        <p>Bandung, 23 Juli 2025 — Dalam upaya meningkatkan kapasitas dosen dalam menyusun proposal hibah pengabdian kepada masyarakat, telah diselenggarakan kegiatan Klinik Proposal Hibah Pengabdian kepada Masyarakat DRTPM Diktisaintek di Bandung. Kegiatan ini difokuskan pada peningkatan kualitas dan kuantitas proposal hibah yang diajukan ke Direktorat Riset, Teknologi, dan Pengabdian kepada Masyarakat (DRTPM).</p>
+        <p>Klinik proposal ini diikuti oleh dosen dan peneliti dari berbagai perguruan tinggi, khususnya dari rumpun ilmu sains dan teknologi (Saintek). Para peserta mendapatkan bimbingan langsung dari narasumber berpengalaman yang merupakan reviewer nasional hibah pengabdian. Materi yang disampaikan mencakup strategi penyusunan proposal yang efektif, kesesuaian dengan panduan DRTPM, hingga tips memperkuat relevansi dan kebermanfaatan program bagi masyarakat.</p>
+        <p>Kegiatan ini juga menjadi ruang diskusi aktif yang mendorong pertukaran ide dan pengalaman antar peserta. Dengan pendekatan interaktif, peserta dapat melakukan evaluasi langsung terhadap draft proposal masing-masing dan menerima masukan konstruktif dari para pendamping.</p>
+        <p>Melalui kegiatan ini, diharapkan jumlah proposal hibah pengabdian yang lolos seleksi dapat meningkat secara signifikan. Lebih jauh, kegiatan ini turut memperkuat implementasi Tri Dharma Perguruan Tinggi, khususnya dalam menjawab tantangan dan kebutuhan riil di tengah masyarakat.</p>
+	<a class="kembali" href="berita.html">Kembali ke Berita</a>
+      </div>
     </main>
 
-<footer style="background-color: #f8f8f8; padding: 10px 0; text-align: center; color: #666; font-size: 14px; border-top: 1px solid #ccc;">
-        <p>&copy; 2025 Universitas Teknologi Digital. Semua Hak Cipta Dilindungi.</p>
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
     </footer>
-    
+
+  </div>
+
+
 <script>
-  // Blok tombol shortcut developer tools
-  document.addEventListener('keydown', function (e) {
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
     if (
-      e.key === 'F12' ||
-      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
-      (e.ctrlKey && e.key === 'U') ||
-      (e.ctrlKey && e.key === 'S')
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
     ) {
-      e.preventDefault();
-      alert("Akses ini dibatasi oleh administrator situs.");
       return false;
     }
-  });
+  }
+  </script>
 
-  // Blok klik kanan
-  document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    alert("Klik kanan dinonaktifkan.");
-  });
 
-  // Blok seleksi teks
-  document.addEventListener('selectstart', function (e) {
-    e.preventDefault();
-  });
 
-  // Blok drag (gambar, teks, dsb.)
-  document.addEventListener('dragstart', function (e) {
-    e.preventDefault();
-  });
-</script>
-    
+  
 </body>
-
 </html>
