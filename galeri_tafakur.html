@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .wadah-narasi {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .wadah-narasi h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #004c99;
+    }
+
+    .daftar-prodi {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .btn-selanjutnya {
+      display: inline-block;
+      margin: 10px 8px;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background-color: #004c99;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-selanjutnya:hover {
+      background-color: #003366;
+    }
+
+    @media (max-width: 600px) {
+      .video-kampus {
+        float: none;
+        width: 100%;
+        margin: 0 auto 20px auto;
+      }
+    }
+
+
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
+
+
+
+
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>" Gerbang Peradaban Digital "</h5>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+
+        <li class="dropdown">
+        <a href="prodi.html">Program Studi</a>
+        <div class="dropdown-content">
+          <a href="inovasiS2.html">Manajemen Inovasi - S2</a>
+          <a href="akuntansiS1.html">Akuntansi - S1</a>
+          <a href="manajemenS1.html">Manajemen - S1</a>
+          <a href="eksyarS1.html">Ekonomi Syariah - S1</a>
+          <a href="dkvS1.html">Desain Komunikasi Visual - S1</a>
+          <a href="teknik-industriS1.html">Teknik Industri - S1</a>
+          <a href="informatikaS1.html">Informatika - S1</a>
+          <a href="hukumS1.html">Hukum - S1</a>
+          <a href="akuntansiD3.html">Akuntansi - D3</a>
+          <a href="manajemen-informatikaD3.html">Manajemen Informatika - D3</a>
+          <a href="manajemen-perusahaanD3.html">Manajemen Perusahaan - D3</a>
+        </div>
+       </li>
+        
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+
+        <li class="dropdown">
+          <a href="#">Galeri</a>
+          <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+        
+        <li><a href="civitas.html">Civitas Akademika</a></li>
+      </ul>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+
+    <!-- Dipindahkan ke sini agar tepat di bawah marquee -->
+    <div class="wadah-narasi">
+      <!--<h2>Galeri Aktivitas Mahasiswa Digitech University</h2>-->
+
+      <div class="daftar-prodi">
+        <a href="galeri_foto_mabit_8.html" class="btn-selanjutnya">MABIT ke-8 &rarr;</a>
+        <a href="galeri_foto_kampus_sehat_2025.html" class="btn-selanjutnya">Kampus Sehat 2025 &rarr;</a>
+        <a href="galeri_foto_seminar_hasil_penelitian_2025.html" class="btn-selanjutnya">Seminar Hasil Penelitian 2025 &rarr;</a>
+        <a href="galeri_foto_dkv_2025.html" class="btn-selanjutnya">RONA VISUAL - DKV 2025 &rarr;</a>
+        <a href="galeri_foto_pelatihan.html" class="btn-selanjutnya">PELATIHAN - Proposal Hibah PKM &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Digitech University</p>
+  </footer>
+
+  <script>
+    const gambar = document.querySelector('.gambar-tengah img');
+    if (gambar) {
+      gambar.classList.add('klik-animasi');
+
+      gambar.addEventListener('click', () => {
+        gambar.style.animation = 'none';
+        gambar.offsetHeight;
+        gambar.style.animation = 'munculMantul 1s ease-out forwards';
+      });
+    }
+  </script>
+
+
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
+    }
+  }
+  </script>
+
+
+  
+</body>
+</html>
