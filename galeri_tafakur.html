@@ -3,60 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universitas Teknologi Digital</title>
+  <title>Lagu Kampus STEMBI & Digitech</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    main {
-      flex: 1;
-      padding: 1rem;
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0px;
+      background: #ccc;
     }
 
-    .wadah-narasi {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.7;
-      color: #333;
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    .wadah-narasi h2 {
-      text-align: center;
-      margin-bottom: 10px;
-      color: #004c99;
+    .banner img.active {
+      opacity: 1;
     }
 
-    .daftar-prodi {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .btn-selanjutnya {
-      display: inline-block;
-      margin: 10px 8px;
-      margin-top: 10px;
-      padding: 12px 24px;
-      background-color: #004c99;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-selanjutnya:hover {
-      background-color: #003366;
-    }
-
-    @media (max-width: 600px) {
-      .video-kampus {
-        float: none;
-        width: 100%;
-        margin: 0 auto 20px auto;
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
       }
+    }
+
+    .container-audio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 0;
+      background: #f4f4f4;
+    }
+
+    .audio-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 75%;
+      text-align: center;
+    }
+
+    .audio-box h3 {
+      margin-bottom: 15px;
+    }
+
+    audio {
+      width: 100%;
     }
 
 
@@ -160,14 +163,14 @@
         <li><a href="kontak.html">Kontak</a></li>
         <li><a href="mp3.html">MP3</a></li>
 
-        <li class="dropdown">
-          <a href="#">Galeri</a>
-          <div class="dropdown-content">
+         <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
           <a href="galeri_foto.html">Galeri Foto</a>
           <a href="galeri_video.html">Galeri Video</a>
           <a href="galeri_tafakur.html">Galeri Tafakur</a>
         </div>
-        
+       
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
@@ -178,14 +181,13 @@
       </marquee>
     </div>
 
-    <!-- Dipindahkan ke sini agar tepat di bawah marquee -->
     <!-- PEMUTAR AUDIO DITAMPILKAN DI SINI -->
     <div class="container-audio">
       
       <div class="audio-box">
-        <h3>MARS - Digitech University</h3>
+        <h3>Dunia Bahagia Akhirat Surgay</h3>
         <audio controls>
-          <source src="audio/mars.mp3" type="audio/mpeg">
+          <source src="tafakur/01.mp3" type="audio/mpeg">
           Browser Anda tidak mendukung pemutar audio.
         </audio>
       </div>
@@ -194,25 +196,12 @@
     
     </div>
      <!-- AKHIR PEMUTAR AUDIO -->
+
   </div>
 
   <footer>
     <p>&copy; 2025 Digitech University</p>
   </footer>
-
-  <script>
-    const gambar = document.querySelector('.gambar-tengah img');
-    if (gambar) {
-      gambar.classList.add('klik-animasi');
-
-      gambar.addEventListener('click', () => {
-        gambar.style.animation = 'none';
-        gambar.offsetHeight;
-        gambar.style.animation = 'munculMantul 1s ease-out forwards';
-      });
-    }
-  </script>
-
 
 
 <script>
