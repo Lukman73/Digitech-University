@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+   main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+   
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="prodi.html">Program Studi</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+
+      <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+        </div>
+     </li>
+            
+        <li><a href="civitas.html">Civitas Akademika</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak!
+      </marquee>
+    </div>
+   
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="dkv/img/01.jpg" alt="Gambar1" />
+          <img src="dkv/img/02.jpg" alt="Gambar2" />
+	  <img src="dkv/img/03.jpg" alt="Gambar3" />
+	  <img src="dkv/img/04.jpg" alt="Gambar4" />
+	  <img src="dkv/img/05.jpg" alt="Gambar5" />
+		<img src="dkv/img/06.jpg" alt="Gambar6" />
+		<img src="dkv/img/07.jpg" alt="Gambar7" />
+		<img src="dkv/img/08.jpg" alt="Gambar8" />
+		<img src="dkv/img/09.jpg" alt="Gambar9" />
+		<img src="dkv/img/10.jpg" alt="Gambar10" />
+		<img src="dkv/img/11.jpg" alt="Gambar11" />
+		<img src="dkv/img/12.jpg" alt="Gambar12" />
+		<img src="dkv/img/13.jpg" alt="Gambar13" />
+		<img src="dkv/img/14.jpg" alt="Gambar14" />
+		<img src="dkv/img/15.jpg" alt="Gambar15" />
+		<img src="dkv/img/16.jpg" alt="Gambar16" />
+		<img src="dkv/img/17.jpg" alt="Gambar17" />
+		<img src="dkv/img/18.jpg" alt="Gambar18" />
+		<img src="dkv/img/19.jpg" alt="Gambar19" />
+		<img src="dkv/img/20.jpg" alt="Gambar20" />
+		<img src="dkv/img/21.jpg" alt="Gambar21" />
+		<img src="dkv/img/22.jpg" alt="Gambar22" />
+		<img src="dkv/img/23.jpg" alt="Gambar23" />
+		<img src="dkv/img/24.jpg" alt="Gambar24" />
+		<img src="dkv/img/25.jpg" alt="Gambar25" />
+		<img src="dkv/img/26.jpg" alt="Gambar26" />
+		<img src="dkv/img/27.jpg" alt="Gambar27" />
+		<img src="dkv/img/28.jpg" alt="Gambar28" />
+		<img src="dkv/img/29.jpg" alt="Gambar29" />
+		<img src="dkv/img/30.jpg" alt="Gambar30" />
+        </div>
+        
+        <a class="kembali" href="galeri_foto.html"> Kembali ke Galeri Foto</a>
+      </div>
+    </main>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+
+
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
+    }
+  }
+  </script>
+
+
+
+  
+</body>
+</html>
