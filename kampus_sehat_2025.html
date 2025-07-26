@@ -120,7 +120,60 @@ main {
     }
 
 
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
 
 
   </style>
@@ -172,13 +225,24 @@ main {
         <div class="dropdown-content">
           <a href="galeri_foto.html">Galeri Foto</a>
           <a href="galeri_video.html">Galeri Video</a>
-          <a href="galeri_tafakur.html">Galeri Tafakur</a>
+	  <a href="galeri_tafakur.html">Galeri Tafakur</a>
         </div>
      </li>
         
         <li><a href="civitas.html">Civitas Akademika</a></li>
       </ul>
     </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
 
     <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
     <!--
@@ -197,14 +261,12 @@ main {
           <img src="photo_kampus_sehat_2025/gambar3.jpg" alt="Pemeriksaan Golongan Darah" />
        </div>
 
-        <h2>Kampus Sehat 2025 - Pemeriksaan Kesehatan</h2>
+        <h2>Kampus Sehat 2025 - Pemeriksaan Kesehatan</h2> 
         <p>Pada hari Jumat, 13 Juni 2025, Digitech University menyelenggarakan kegiatan pemeriksaan kesehatan gratis bagi seluruh Dosen, mahasiswa dan karyawan. Kegiatan ini diprakarsai oleh Himpunan Mahasiswa Teknik Industri sebagai bentuk kepedulian terhadap kesehatan civitas akademika.</p>
         <p>Pemeriksaan yang dilakukan meliputi pengecekan tekanan darah, kadar gula darah, gangguan mata dan konsultasi kesehatan ringan.</p>
         <p>Acara ini disambut antusias oleh para mahasiswa yang ingin mengetahui kondisi kesehatan mereka secara dini, terlebih menjelang masa ujian akhir semester.</p>
         <p>Melalui kegiatan ini, Digitech University ingin menanamkan pentingnya pola hidup sehat dan preventif sejak usia muda. Kampus berharap, kegiatan serupa bisa terus dilakukan secara rutin demi menciptakan lingkungan belajar yang sehat dan produktif.</p>
-        <a class="kembali" href="berita.html"> Kembali ke Berita</a>
-      </div>
-    </main>
+	<a class="kembali" href="berita.html">Kembali ke Berita</a>
       </div>
     </main>
 
@@ -214,5 +276,23 @@ main {
     </footer>
 
   </div>
+
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
+    }
+  }
+  </script>
+
+
+
+  
 </body>
 </html>
