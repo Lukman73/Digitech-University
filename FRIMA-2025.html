@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* BANNER SLIDESHOW */
+    .banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      overflow: hidden;
+      margin-top: 0;
+      background: #ccc;
+    }
+
+    .banner img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* UTAMA */
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .berita-utama {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .berita-utama h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .berita-utama p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .berita-utama a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .isi-berita {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .isi-berita h2 {
+      color: #002147;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .isi-berita p {
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    a.kembali {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #002147;
+      text-decoration: underline;
+    }
+
+
+/* --- Tambahan Dropdown Style --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003399;
+  min-width: 220px;
+  z-index: 1000;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #001f4d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsif: Dropdown di HP dengan klik */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* Nonaktif hover di HP */
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Logo Kampus" class="logo">
+        <div class="judul">
+          <h1>Digitech University</h1>
+          <h5>"Gerbang Peradaban Digital"</h5>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beranda.html">Beranda</a></li>
+
+        <li class="dropdown">
+        <a href="prodi.html">Program Studi</a>
+        <div class="dropdown-content">
+          <a href="inovasiS2.html">Manajemen Inovasi - S2</a>
+          <a href="akuntansiS1.html">Akuntansi - S1</a>
+          <a href="manajemenS1.html">Manajemen - S1</a>
+          <a href="eksyarS1.html">Ekonomi Syariah - S1</a>
+          <a href="dkvS1.html">Desain Komunikasi Visual - S1</a>
+          <a href="teknik-industriS1.html">Teknik Industri - S1</a>
+          <a href="informatikaS1.html">Informatika - S1</a>
+          <a href="hukumS1.html">Hukum - S1</a>
+          <a href="akuntansiD3.html">Akuntansi - D3</a>
+          <a href="manajemen-informatikaD3.html">Manajemen Informatika - D3</a>
+          <a href="manajemen-perusahaanD3.html">Manajemen Perusahaan - D3</a>
+        </div>
+       </li>
+        
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="mp3.html">MP3</a></li>
+     
+      <li class="dropdown">
+        <a href="#">Galeri</a>
+        <div class="dropdown-content">
+          <a href="galeri_foto.html">Galeri Foto</a>
+          <a href="galeri_video.html">Galeri Video</a>
+	  <a href="galeri_tafakur.html">Galeri Tafakur</a>
+        </div>
+     </li>
+        
+        <li><a href="civitas.html">Civitas Akademika</a></li>
+      </ul>
+    </nav>
+
+    <!-- MARQUEE INFORMASI -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        Penerimaan Mahasiswa Baru 2025 telah dibuka ! 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Kuliah Perdana dimulai Oktober 2025 
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Daftar sekarang di halaman Kontak !
+      </marquee>
+    </div>
+
+    <!-- BANNER (opsional, tambahkan gambar slideshow di sini jika ada) -->
+    <!--
+    <div class="banner">
+      <img src="img/slide1.jpg" class="active" alt="Slide 1" />
+      <img src="img/slide2.jpg" alt="Slide 2" />
+    </div>
+    -->
+
+    <!-- KONTEN UTAMA -->
+     <main>
+      <div class="isi-berita">
+        <div class="gambar-berita">
+          <img src="photo_pelatihan/02.jpg" alt="Gambar1" />
+          <img src="photo_pelatihan/07.jpg" alt="Gambar2" />
+	  <img src="photo_pelatihan/08.jpg" alt="Gambar3" />
+        </div>
+
+        <h2>FRIMA-2025 : "Meneropong Tantangan dan Peluang Digitalisasi pada Berbagai Sektor Industri"</h2> 
+        <p>Bandung, 06 Agustus 2025 — Festival Riset Ilmiah Manajemen & Akuntansi merupakan agenda ilmiah yang dirancang sebagai wadah bertemunya gagasan, hasil riset, dan inovasi dari para akademisi, mahasiswa, peneliti, serta praktisi di bidang manajemen dan akuntansi. Festival ini bukan hanya sekadar forum presentasi ilmiah, tetapi juga menjadi ruang refleksi atas dinamika dan kompleksitas dunia industri yang terus berubah, khususnya di era digital saat ini.</p>
+        <p>Mengangkat tema besar “Meneropong Tantangan dan Peluang Digitalisasi pada Berbagai Sektor Industri,” kegiatan ini berupaya menggali secara mendalam bagaimana transformasi digital berdampak terhadap tata kelola organisasi, proses bisnis, hingga pencatatan dan pelaporan keuangan. Era digital telah membawa perubahan besar di hampir seluruh lini industri — mulai dari manufaktur, keuangan, pendidikan, hingga sektor publik — sehingga membutuhkan pemahaman baru yang berbasis data, teknologi, dan kemampuan adaptasi tinggi.</p>
+        <p>Digitalisasi bukan sekadar soal penggunaan perangkat teknologi, melainkan berkaitan erat dengan perubahan pola pikir, struktur organisasi, pengambilan keputusan berbasis data (data-driven decision making), hingga transparansi dan akuntabilitas keuangan. Dalam konteks akuntansi, teknologi seperti 'cloud accounting', 'big data analytics', hingga 'blockchain' telah memunculkan sistem baru yang lebih efisien, akurat, dan aman. Sementara dalam manajemen, lahirnya sistem ERP, CRM, serta berbagai aplikasi berbasis AI mendorong organisasi untuk lebih responsif terhadap perubahan pasar.</p>
+        <p>Namun dibalik segala peluang, digitalisasi juga membawa tantangan yang tidak ringan. Kesenjangan digital, keterbatasan infrastruktur, keamanan data, serta kurangnya literasi teknologi masih menjadi isu utama yang harus dihadapi bersama. Dunia akademik dituntut untuk tidak hanya memahami teori, tetapi juga mampu menjawab kebutuhan zaman dengan solusi yang konkret, relevan, dan aplikatif.</p>
+	<p>Festival ini menghadirkan berbagai kegiatan seperti pemaparan hasil penelitian, diskusi panel, workshop, dan forum ilmiah yang mempertemukan lintas generasi dan latar belakang. Para peserta berkesempatan mempublikasikan karya ilmiahnya dalam bentuk prosiding sebagai bentuk kontribusi terhadap pengembangan ilmu pengetahuan dan praktik profesional yang berbasis riset.</p>
+	<p>Kegiatan ini juga diharapkan dapat membangun kolaborasi yang berkelanjutan antara kampus, dunia usaha, dan pemerintah. Hasil penelitian yang dipresentasikan dalam festival ini tidak hanya menjadi bahan bacaan, tetapi juga dapat menjadi dasar kebijakan, perbaikan sistem, atau inovasi produk dan layanan yang dibutuhkan masyarakat luas.</p>
+	<p>Dengan semangat kolaboratif dan inovatif, "Festival Riset Ilmiah Manajemen & Akuntansi" menjadi simbol komitmen bersama dalam membangun masa depan yang adaptif, berkelanjutan, dan berbasis teknologi. Dunia tidak akan berhenti berubah, dan melalui kegiatan seperti ini, para insan akademik ditantang untuk terus berpikir kritis dan berkontribusi nyata dalam perubahan itu.</p>
+	<p>Akhir kata, festival ini tidak hanya menjadi panggung akademik, tetapi juga jembatan menuju dunia profesional yang dinamis. Semoga seluruh rangkaian kegiatan dapat memberi inspirasi baru, memperkuat semangat penelitian, serta memperluas jejaring antar-insan intelektual dari berbagai wilayah dan disiplin ilmu.</p>
+	<a class="kembali" href="berita.html">Kembali ke Berita</a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Digitech University</p>
+    </footer>
+
+  </div>
+
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+    ) {
+      return false;
+    }
+  }
+  </script>
+
+
+
+  
+</body>
+</html>
